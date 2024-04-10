@@ -1,0 +1,212 @@
+// mobile btn for extend
+// menu
+
+@mixin mobileCtrlBtn {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0px;
+  display: none;
+  font-size: 0em;
+  padding: 15px;
+  margin: 0;
+  min-width: auto;
+  min-height: auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  z-index: 100;
+
+  @include screen("mobile") {
+    display: block;
+  }
+}
+
+.sidebarCtrlBtn {
+  display: none;
+  left: 0px;
+  @include mobileCtrlBtn;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 2px;
+    background: $colorPrimary;
+    box-shadow: $colorPrimary 0 6px 0 0, $colorPrimary 0 -6px 0 0;
+    transition: 0.2s linear;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: $colorPrimary;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.2s linear;
+  }
+
+  // &:hover {
+  //   &::before {
+  //     transform: translate(-50%, -50%) rotate(45deg);
+  //     box-shadow: none;
+  //   }
+  //   &::after {
+  //     opacity: 1;
+  //     transform: translate(-50%, -50%) rotate(-45deg);
+  //   }
+  // }
+}
+
+// search
+.searchCtrlBtn {
+  display: none;
+  right: 0px;
+  font-size: 0em;
+  z-index: 9;
+  @include mobileCtrlBtn;
+
+  &:before {
+    width: 40px;
+    height: 40px;
+    background: url(../images/basic/icon_search.svg) no-repeat center center;
+    background-size: 28px;
+    opacity: 0.6;
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+  }
+}
+
+//header
+.header {
+  height: 128px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transition: 0.3s ease-out;
+  @include screen("mobile") {
+    position: fixed;
+    width: 100%;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    pointer-events: none;
+    z-index: -1;
+
+    @include screen("mobile") {
+      height: 60px;
+    }
+  }
+
+  & > .container {
+    max-width: $containerMax;
+    overflow: visible;
+    position: relative;
+
+    @include screen("mobile") {
+      padding: 0;
+    }
+  }
+
+  h1 {
+    float: left;
+    width: 250px;
+    height: 80px;
+    margin: -34px 0 0 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include screen("mobile") {
+      float: none;
+      margin: 0;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    img {
+      display: block;
+      max-width: 250px;
+      max-height: 80px;
+    }
+
+    @include screen("mobile") {
+      padding: 2px 60px;
+      width: 100%;
+      text-align: center;
+      height: 60px;
+
+      img {
+        width: auto;
+        height: auto;
+        max-height: 54px;
+        margin: 0px auto;
+        transform: scale(0.8);
+      }
+    }
+  }
+
+  // 導覽列
+  .navigation {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    z-index: 55;
+    align-items: center;
+    padding: 24px 0 12px 0;
+    @include screen("mobile") {
+      display: none;
+    }
+    .navList {
+      flex: 1 1 auto;
+      margin: 0;
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+      li {
+        flex: 0 0 auto;
+        a {
+          display: block;
+          padding: 0 12px;
+          line-height: 30px;
+          text-decoration: none;
+          @include aSetting($colorWord);
+        }
+      }
+    }
+
+    //右邊區塊
+    // .submenuBox {
+    //   display: flex;
+    //   align-items: center;
+    //   position: relative;
+
+    // }
+  }
+}

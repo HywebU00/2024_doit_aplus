@@ -1,0 +1,202 @@
+footer {
+  clear: both;
+  text-align: left;
+  padding: 1em 0;
+  .container {
+    justify-content: space-between;
+    display: flex;
+    padding: 0 80px;
+    @include screen("tablet") {
+      flex-wrap: wrap;
+    }
+    @include screen("mobile") {
+      text-align: center;
+      padding: 0 30px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $colorWord;
+    cursor: pointer;
+    &:hover,
+    &:focus-visible {
+      color: $aHover;
+    }
+  }
+  .footerInfo {
+    flex: 1 1 calc(100% - 250px - 150px - 200px - 20px);
+    margin-right: 20px;
+    @include screen("tablet") {
+      flex: 1 1 60%;
+      margin-right: 2%;
+    }
+    @include screen("mobile") {
+      flex: 1 1 100%;
+      margin-right: 0;
+    }
+    .footerLogo {
+      img {
+        max-width: 340px;
+        max-height: 77px;
+      }
+    }
+    .footerLink {
+      margin-bottom: 4px;
+      a {
+        font-weight: bold;
+      }
+    }
+    p {
+      line-height: 1.65em;
+      margin-top: 0;
+    }
+  }
+  .footerTitle {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .footerMenu {
+    padding-top: 40px;
+    flex: 1 1 250px;
+    @include screen("tablet") {
+      flex: 1 1 38%;
+    }
+    @include screen("mobile") {
+      flex: 1 1 100%;
+      padding-top: 0;
+      margin-bottom: 1em;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include screen("mobile") {
+        justify-content: center;
+      }
+      li {
+        width: 50%;
+        margin-bottom: 18px;
+        @include screen("mobile") {
+          width: auto;
+          margin-bottom: 10px;
+          a {
+            padding: 0.5em;
+          }
+        }
+      }
+    }
+  }
+  .footerService {
+    padding-top: 40px;
+    flex: 1 1 150px;
+    @include screen("tablet") {
+      flex: 1 1 50%;
+      padding-top: 0;
+    }
+    @include screen("mobile") {
+      flex: 1 1 100%;
+      padding-top: 0;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      @include screen("mobile") {
+        justify-content: center;
+      }
+      li {
+        width: 100%;
+        margin-bottom: 18px;
+        @include screen("tablet") {
+          width: auto;
+          a {
+            margin-right: 1em;
+          }
+        }
+        @include screen("mobile") {
+          margin-bottom: 10px;
+          a {
+            padding: 0.5em;
+          }
+        }
+      }
+    }
+  }
+  .footerIcon {
+    padding-top: 40px;
+    flex: 1 1 200px;
+    text-align: right;
+    @include screen("tablet") {
+      flex: 1 1 50%;
+      text-align: center;
+      padding-top: 0;
+    }
+    @include screen("mobile") {
+      flex: 1 1 100%;
+    }
+    a {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      &:focus-visible {
+        &:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-shadow: 0px 0px 0px 1px $aHover inset;
+          z-index: 99;
+        }
+      }
+    }
+    img {
+      max-width: 180px;
+    }
+  }
+  // .footerLogo {
+  //   flex: 0 1 240px;
+  // }
+  // .footerInfo {
+  //   flex: 1 1 auto;
+  // }
+  // 版權連結
+  // .footerLink {
+  //   @include liReset();
+  //   clear: both;
+  //   display: flex;
+  //   margin-bottom: 10px;
+  //   @include screen("mobile") {
+  //     flex-flow: row wrap;
+  //   }
+  //   li {
+  //     flex: 0 1 auto;
+  //     margin: 0px 5px 5px 0px;
+  //     @include screen("mobile") {
+  //       flex: 1 1 25%;
+  //     }
+  //     a {
+  //       display: block;
+  //       padding: 0.25em 1em;
+  //       background: $colorPrimary;
+  //       color: #fff;
+  //       text-align: center;
+  //       transition: 0.3s ease-out;
+  //       white-space: nowrap;
+  //       &:hover,
+  //       &:focus-visible {
+  //         background: darken($colorPrimary, 10);
+  //       }
+  //     }
+  //   }
+  // }
+}

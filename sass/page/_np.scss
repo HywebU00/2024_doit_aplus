@@ -1,0 +1,128 @@
+.leftBlock {
+  .nodeMenu {
+    padding: 0;
+  }
+
+  .title {
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-weight: 400;
+
+    background: $colorPrimary;
+    padding: 1rem 0.5rem;
+    margin: 0;
+  }
+  .nodeMenu {
+    .accordion {
+      ul {
+        padding: 0;
+        li {
+          // border-color: $colorGray;
+          font-weight: bold;
+          color: $colorWord;
+
+          margin: 0;
+          padding: 0;
+          .accordionList {
+            padding: 15px 30px 15px 20px;
+
+            .accordionArrow {
+              &.noItem {
+                &:after {
+                  display: none;
+                }
+              }
+            }
+            + .accordionContent {
+              .content {
+                a {
+                  padding-left: 2rem;
+                }
+              }
+            }
+          }
+
+          > a,
+          button {
+            margin: 0rem 0.5rem;
+            background: #fff;
+            color: $colorWord;
+            margin: 0;
+            border-radius: 0rem;
+            &:hover,
+            &:focus {
+              background: darken($colorGray, 18%);
+            }
+          }
+
+          &.active {
+            > button {
+              background: darken($colorGray, 18%);
+              // background: lighten($colorSecondary, 25%);
+            }
+          }
+          // ul {
+          //   li {
+          //     button {
+          //       &:hover,
+          //       &:focus {
+          //         background: $colorInfo;
+          //       }
+          //     }
+          //   }
+          //   li.active {
+          //     button {
+          //       background: $colorInfo;
+          //     }
+          //   }
+          // }
+        }
+      }
+      .active .accordionArrow {
+        transform: rotate(45deg);
+        top: calc(50% - 7px);
+      }
+      .accordionArrow {
+        right: 15px;
+        &::after {
+          border: 2px solid $colorPrimary;
+          border-bottom: 0;
+          border-left: 0;
+        }
+      }
+      .content {
+        a {
+          padding-left: 1.25rem;
+        }
+      }
+      .accordionContent {
+        .content {
+          background: lighten($colorGray, 15%);
+          padding: 0;
+          button {
+            background: unset;
+            padding-left: 2rem;
+            &:hover {
+              background: $colorGray;
+            }
+            + .accordionContent {
+              .content {
+                a {
+                  padding-left: 3rem;
+                }
+              }
+            }
+          }
+          a {
+            // padding-left: 1.75rem;
+            padding-left: 2.5rem;
+          }
+          .active {
+            button {
+              background: $colorGray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
