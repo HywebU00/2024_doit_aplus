@@ -2925,8 +2925,8 @@ img {
     text-shadow: none;
   }
   .btn:hover {
-    background: #c7c7c7;
-    border: 1px solid #adadad;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -2954,8 +2954,8 @@ img {
     color: #fff;
   }
   .btnGreen:hover {
-    background: #1d601d;
-    border: 1px solid #113911;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -2979,8 +2979,8 @@ img {
     color: #fff;
   }
   .btnBlue:hover {
-    background: #004d99;
-    border: 1px solid #003366;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -3004,8 +3004,8 @@ img {
     color: #333;
   }
   .btnYellow:hover {
-    background: #e7ae01;
-    border: 1px solid #b48801;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -3029,8 +3029,8 @@ img {
     color: #fff;
   }
   .btnOrange:hover {
-    background: #9d3400;
-    border: 1px solid #6a2300;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -3054,8 +3054,8 @@ img {
     color: #fff;
   }
   .btnRed:hover {
-    background: #a00000;
-    border: 1px solid #6d0000;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -3079,8 +3079,8 @@ img {
     color: #fff;
   }
   .btnPurple:hover {
-    background: #641a65;
-    border: 1px solid #3c0f3c;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -3104,8 +3104,8 @@ img {
     color: #fff;
   }
   .btnSubmit:hover {
-    background: #151a39;
-    border: 1px solid #070914;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -3132,8 +3132,8 @@ img {
     color: #fff;
   }
   .btnSearch:hover {
-    background: #151a39;
-    border: 1px solid #070914;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -3915,21 +3915,17 @@ img {
         flex-wrap: wrap;
   }
   .category ul li {
-    margin: 0px 3px 3px 0px;
+    margin: 0px 8px 3px 0px;
     display: block;
   }
   .category a {
-    border: 1px solid #aaa;
+    border: 1px solid #4487b0;
+    background: #4487b0;
     padding: 0.25em 0.75em;
     display: block;
-    color: #333;
-    font-size: 0.875rem;
+    color: #fff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-  }
-  .category a:before {
-    content: "#";
-    margin-right: 0.25em;
   }
   .category a:hover, .category a:focus, .category a.active {
     color: #fff;
@@ -5255,7 +5251,6 @@ img {
     padding: 0.5em 0;
   }
   .flexForm {
-    font-size: 0.938rem;
     margin: 0.5em;
   }
   .flexForm .formGrp {
@@ -6610,8 +6605,8 @@ img {
     border-radius: 4px;
   }
   .uploadGrp .uploadBtn:hover {
-    background: #366b8b;
-    border: 1px solid #284f66;
+    background: #4487b0;
+    border: 1px solid #4487b0;
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -6804,8 +6799,8 @@ img {
       white-space: nowrap;
       text-align: left;
       font-weight: normal;
-      color: #888;
-      font-size: 0.688rem;
+      color: #666;
+      font-size: 0.937rem;
     }
   }
   .fixThTable {
@@ -6949,7 +6944,7 @@ img {
   }
   .lp table td.date {
     text-align: center;
-    color: #666;
+    color: #000;
   }
   @media screen and (max-width: 939px) {
     .lp table td.date {
@@ -6958,7 +6953,7 @@ img {
   }
   .lp table td.num {
     text-align: center;
-    color: #666;
+    color: #000;
   }
   @media screen and (max-width: 939px) {
     .lp table td.num {
@@ -7037,16 +7032,21 @@ img {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 0;
     padding: 1em 0;
     list-style-type: none;
   }
   .submenu li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 48%;
-            flex: 1 1 48%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    -ms-flex-preferred-size: calc((100% - 10px) / 2);
+        flex-basis: calc((100% - 10px) / 2);
     margin-bottom: 10px;
     border-radius: 5px;
   }
@@ -7064,8 +7064,8 @@ img {
     }
   }
   .submenu li a {
-    border: 1px solid #ddd;
-    padding: 1em 1em 1em 2.5em;
+    border: 1px solid #1c234c;
+    padding: 1em 1em 1em 3.5em;
     display: block;
     vertical-align: top;
     position: relative;
@@ -7074,6 +7074,9 @@ img {
             box-sizing: border-box;
     text-decoration: none;
     color: #000;
+    background: #fff url(../images/arrow_more.png) 1em center no-repeat;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
   }
   .submenu li a:hover, .submenu li a:focus-visible {
     color: #4487b0;
@@ -7097,6 +7100,7 @@ img {
   .submenu li a:hover, .submenu li a:focus-visible {
     border: 1px solid #4487b0;
     color: #4487b0;
+    background: #fff url(../images/arrow_more.png) 1.5em center no-repeat;
   }
   .tabSet {
     margin: 30px auto;
@@ -7222,7 +7226,7 @@ img {
   .thumbnail .imgContainer {
     overflow: hidden;
     position: relative;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
   .thumbnail .imgContainer img {
     width: 100%;
@@ -7711,6 +7715,10 @@ img {
     background: #4487b0;
     border: #3d799e solid 1px;
   }
+  .pagination .page li.active a:hover, .pagination .page li.active a:focus-visible {
+    background: #1c234c;
+    border: #1c234c solid 1px;
+  }
   .pagination .page li.last a:after, .pagination .page li.last a:before, .pagination .page li.next a:before, .pagination .page li.prev a:before, .pagination .page li.first a:after, .pagination .page li.first a:before {
     content: "";
     position: absolute;
@@ -7772,13 +7780,17 @@ img {
             align-items: center;
     vertical-align: middle;
   }
+  @media screen and (max-width: 939px) {
+    .pagination .total {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  }
   .pagination .total select {
     margin: 0px 0.5em;
-  }
-  @media screen and (max-width: 939px) {
-    .pagination .total select {
-      margin: 0px;
-    }
   }
   .pagination .total .btn {
     min-width: auto;
@@ -7884,22 +7896,23 @@ img {
     list-style: none;
     padding: 0;
   }
-  .accordion ul li.accordionList {
+  .accordion ul li {
     margin-bottom: 0.5em;
   }
-  .accordion ul li.accordionList .accordionBtn {
+  .accordion ul li .accordionList {
     width: 100%;
     border: none;
     border-radius: 0;
     display: block;
     text-align: left;
-    background-color: #21baff;
+    background-color: #1c234c;
     color: #fff;
     text-decoration: none;
-    padding: 5px 50px 5px 20px;
+    padding: 16px 110px 16px 20px;
     position: relative;
+    margin: 0;
   }
-  .accordion ul li.accordionList.active .accordionArrow {
+  .accordion ul li.active .accordionArrow {
     top: calc(50% - 2px);
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
@@ -7908,14 +7921,18 @@ img {
     line-height: 1.45em;
     -webkit-transition: height 0.3s linear;
     transition: height 0.3s linear;
-    overflow: hidden;
     display: none;
   }
   .accordion .accordionContent .content {
-    padding: 10px;
+    padding: 20px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
   }
   .accordion .accordionState {
-    margin-left: 10px;
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 54px;
   }
   .accordion .accordionArrow {
     position: absolute;
@@ -8137,7 +8154,6 @@ img {
     list-style-type: none;
   }
   .leftBlock .nodeMenu ul li {
-    font-size: 0.938rem;
     margin: 0 0 5px;
     padding: 0 0 5px;
     border-bottom: 1px solid #ccc;
@@ -8209,6 +8225,18 @@ img {
   }
   .main h2 {
     line-height: 1.25em;
+  }
+  @media screen and (max-width: 939px) {
+    .inkv {
+      display: none;
+    }
+  }
+  .inkv .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .inkv .container img {
+    display: block;
   }
   .innerPage > .container {
     padding-top: 1em;
@@ -10026,7 +10054,6 @@ img {
     padding: 10px;
   }
   .sliderFor .imgContainer {
-    border-radius: 1rem;
     overflow: hidden;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -10056,7 +10083,6 @@ img {
   .navSlider {
     width: 60%;
     margin: 0 auto;
-    border-radius: 0.5rem;
     overflow: hidden;
   }
   .navSlider .imgContainer {
@@ -10090,7 +10116,6 @@ img {
     padding: 0;
   }
   .leftBlock .title {
-    border-radius: 0.5rem 0.5rem 0 0;
     font-weight: 400;
     background: #1c234c;
     padding: 1rem 0.5rem;
@@ -10125,9 +10150,19 @@ img {
   .leftBlock .nodeMenu .accordion ul li > a:hover, .leftBlock .nodeMenu .accordion ul li > a:focus,
   .leftBlock .nodeMenu .accordion ul li button:hover,
   .leftBlock .nodeMenu .accordion ul li button:focus {
-    background: #9e9e9e;
+    color: #fff;
+    background: #4487b0;
   }
   .leftBlock .nodeMenu .accordion ul li.active > button {
+    color: #fff;
+    background: #4487b0;
+  }
+  .leftBlock .nodeMenu .accordion ul li ul li button:hover, .leftBlock .nodeMenu .accordion ul li ul li button:focus {
+    color: #000;
+    background: #9e9e9e;
+  }
+  .leftBlock .nodeMenu .accordion ul li ul li.active button {
+    color: #000;
     background: #9e9e9e;
   }
   .leftBlock .nodeMenu .accordion .active .accordionArrow {
@@ -10169,22 +10204,28 @@ img {
   .conditional_searchbtn {
     border-radius: 0.25rem;
     font-size: 1em;
-    background-image: url("../images/icon/icon_search.svg");
+    color: #fff;
+    background: #1c234c url("../images/icon/icon_search.svg");
     background-position: 20px 12px;
     background-repeat: no-repeat;
     background-size: 16px;
     padding-left: 46px;
+    border: 1px solid #1c234c;
+    border-radius: 0;
   }
   .conditional_searchbtn:hover {
-    background-image: url("../images/icon/icon_search.svg");
+    color: #fff;
+    background: #4487b0 url("../images/icon/icon_search.svg");
     background-position: 20px 12px;
     background-repeat: no-repeat;
     background-size: 16px;
+    border: 1px solid #4487b0;
   }
   .conditional_searchblock {
+    -webkit-box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
     margin-top: 0.5rem;
     padding: 1rem;
-    border-radius: 0.5rem;
     display: none;
   }
   .conditional_searchblock .formTitle {
@@ -10211,12 +10252,25 @@ img {
   .cjkList li {
     list-style-type: cjk-ideographic;
   }
+  .lp table {
+    background: #fff;
+  }
   .lp table td.num {
     text-align: end;
   }
+  @media screen and (max-width: 939px) {
+    .lp table td.num {
+      text-align: left;
+    }
+  }
   .lp table td.type {
     text-align: center;
-    color: #666;
+    color: #000;
+  }
+  @media screen and (max-width: 939px) {
+    .lp table td.type {
+      text-align: left;
+    }
   }
   .lp table td .fileDownload {
     padding-left: 0;
@@ -10232,6 +10286,9 @@ img {
     margin: 0.1em;
     font-size: 0.85em;
   }
+  .lp .cardList {
+    padding: 0;
+  }
   .lp .cardList p {
     margin-top: 0.75em;
   }
@@ -10241,10 +10298,8 @@ img {
     font-size: 0.8em;
     line-height: 1.25em;
   }
-  .lp .videoList .flexSet {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  .lp .videoList {
+    padding: 0;
   }
   .lp .videoList .title {
     overflow: hidden;
@@ -10288,31 +10343,47 @@ img {
     opacity: 0;
   }
   .lp .thumbnail {
-    -ms-flex-preferred-size: calc(25% - 12px);
-        flex-basis: calc(25% - 12px);
-    max-width: calc(25% - 12px);
-    margin: 12px 6px;
+    -ms-flex-preferred-size: calc(25% - 16px);
+        flex-basis: calc(25% - 16px);
+    max-width: calc(25% - 16px);
+    margin: 12px 0;
   }
   @media screen and (max-width: 1199px) {
     .lp .thumbnail {
-      -ms-flex-preferred-size: calc(33.3333333333% - 12px);
-          flex-basis: calc(33.3333333333% - 12px);
-      max-width: calc(33.3333333333% - 12px);
+      -ms-flex-preferred-size: calc(33.3333333333% - 16px);
+          flex-basis: calc(33.3333333333% - 16px);
+      max-width: calc(33.3333333333% - 16px);
     }
   }
   @media screen and (max-width: 939px) {
     .lp .thumbnail {
-      -ms-flex-preferred-size: calc(50% - 12px);
-          flex-basis: calc(50% - 12px);
-      max-width: calc(50% - 12px);
+      -ms-flex-preferred-size: calc(50% - 16px);
+          flex-basis: calc(50% - 16px);
+      max-width: calc(50% - 16px);
     }
   }
   @media screen and (max-width: 575px) {
     .lp .thumbnail {
-      -ms-flex-preferred-size: calc(100% - 12px);
-          flex-basis: calc(100% - 12px);
-      max-width: calc(100% - 12px);
+      -ms-flex-preferred-size: calc(100% - 16px);
+          flex-basis: calc(100% - 16px);
+      max-width: calc(100% - 16px);
     }
+  }
+  .lp .thumbnail .caption .title {
+    color: #1c234c;
+  }
+  .lp .thumbnail .caption p {
+    color: #000;
+  }
+  .lp .thumbnail .imgContainer img {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .lp .thumbnail:hover .imgContainer img, .lp .thumbnail:focus .imgContainer img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
   .lp .accordion .accordionTable {
     overflow-x: scroll;

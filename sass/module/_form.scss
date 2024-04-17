@@ -1,4 +1,8 @@
-@mixin formStyle($formColor: $colorWord, $formBorder: $colorGray, $formRadius: $btnRadius) {
+@mixin formStyle(
+  $formColor: $colorWord,
+  $formBorder: $colorGray,
+  $formRadius: $btnRadius
+) {
   color: $formColor;
   font-size: 1em;
   border: 1px solid $formBorder;
@@ -66,7 +70,7 @@ select::-ms-expand {
 }
 
 .flexForm {
-  font-size: 0.938rem;
+  // font-size: 0.938rem;
   margin: 0.5em;
 
   .formGrp {
@@ -92,7 +96,7 @@ select::-ms-expand {
     flex: 0 0 $formTitleWidth;
     align-self: flex-start;
     padding: 0.3em 1em;
-    @include screen('mobile') {
+    @include screen("mobile") {
       max-width: calc(100% - 0.6em);
       flex-basis: calc(100% - 0.6em);
       margin: 0 0.3em;
@@ -113,13 +117,13 @@ select::-ms-expand {
       // &.formCol_8_4,
       // &.formCol_2_2_8,
       // &.formCol_8_2_2
-      &[class*='formCol'] {
+      &[class*="formCol"] {
         flex-basis: calc(100% - #{$formTitleWidth});
         max-width: calc(100% - #{$formTitleWidth});
         padding-top: 0;
         @include gutter();
 
-        @include screen('mobile') {
+        @include screen("mobile") {
           flex-basis: 100%;
           max-width: 100%;
           @include gutter(0);
@@ -141,13 +145,13 @@ select::-ms-expand {
     flex-wrap: wrap;
     @include gutter();
 
-    @include screen('mobile') {
+    @include screen("mobile") {
       max-width: 100%;
       flex-basis: 100%;
       @include gutter(0);
     }
 
-    *[class^='notice'] {
+    *[class^="notice"] {
       margin: 0 0.3em 0.3em 0.3em;
       width: calc(100% - 0.6em);
     }
@@ -190,20 +194,20 @@ select::-ms-expand {
         align-items: center;
         @include gutter(0);
 
-        @include screen('mobile') {
+        @include screen("mobile") {
           flex-basis: 100%;
         }
 
         &.formInline {
-          input[type='text'],
-          input[type='tel'],
+          input[type="text"],
+          input[type="tel"],
           select,
           .checkbox {
             width: auto;
             min-width: 100px;
             display: inline-block;
 
-            @include screen('xsMobile') {
+            @include screen("xsMobile") {
               width: calc(100% - 0.6em);
               display: block;
             }
@@ -223,22 +227,22 @@ select::-ms-expand {
 
     // 電話專屬
     .tel {
-      input[type='text']:first-child,
-      input[type='tel']:first-child {
+      input[type="text"]:first-child,
+      input[type="tel"]:first-child {
         background: url(../images/icon/icon_add.svg) no-repeat 0.5em center;
         background-size: 12px;
         padding-left: 1.5em;
       }
 
-      input[type='text']:first-child,
+      input[type="text"]:first-child,
       select:first-child,
-      input[type='tel']:first-child {
+      input[type="tel"]:first-child {
         width: 100px;
 
         & ~ input {
           width: calc(100% - 200px);
 
-          @include screen('xsMobile') {
+          @include screen("xsMobile") {
             width: 100%;
             display: block;
           }
@@ -253,7 +257,7 @@ select::-ms-expand {
         margin-right: 0.5em;
         text-align-last: center;
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 88%;
           min-width: 88%;
           display: inline-block;
@@ -283,17 +287,17 @@ select::-ms-expand {
           text-align: center;
         }
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 100px;
           display: inline-block;
         }
       }
 
-      input[type='text'] {
+      input[type="text"] {
         //width: calc(100% - 231px) ;
         flex: 1 1 auto;
 
-        @include screen('mobile') {
+        @include screen("mobile") {
           display: block;
           width: calc(100% - 0.6em);
         }
@@ -304,7 +308,7 @@ select::-ms-expand {
     .datePick {
       position: relative;
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 100%;
         display: block;
         padding-right: 0;
@@ -316,12 +320,12 @@ select::-ms-expand {
         padding-right: 0;
 
         &:before {
-          content: '~';
+          content: "~";
           font-size: 1.5em;
           color: #777;
         }
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           margin-left: 0em;
 
           //padding-right:.5em;
@@ -353,23 +357,23 @@ select::-ms-expand {
         }
       }
 
-      & > input[type='text'],
-      & > input[type='date'] {
+      & > input[type="text"],
+      & > input[type="date"] {
         width: 10em;
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
         }
       }
 
-      & > input[type='text'] {
+      & > input[type="text"] {
         padding-right: 2em;
       }
     }
   }
 
   //選單格線系統
-  [class*='formCol'] {
+  [class*="formCol"] {
     flex-basis: 100%;
     max-width: 100%;
     align-items: center;
@@ -397,7 +401,7 @@ select::-ms-expand {
       // }
     }
 
-    @include screen('mobile') {
+    @include screen("mobile") {
       @include gutter();
     }
   }
@@ -408,7 +412,7 @@ select::-ms-expand {
       flex-basis: 50%;
       max-width: 50%;
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 100%;
         flex-basis: 100%;
         max-width: 100%;
@@ -422,7 +426,7 @@ select::-ms-expand {
       flex-basis: calc(50% - 0.6em);
       max-width: calc(50% - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
         max-width: calc(100% - 0.6em);
@@ -436,7 +440,7 @@ select::-ms-expand {
       flex-basis: calc(100% * 0.33333);
       max-width: calc(100% * 0.33333);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 100%;
         flex-basis: 100%;
         max-width: 100%;
@@ -449,7 +453,7 @@ select::-ms-expand {
       flex-basis: calc(100% * 0.33333 - 0.6em);
       max-width: calc(100% * 0.33333 - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
         max-width: calc(100% - 0.6em);
@@ -463,13 +467,13 @@ select::-ms-expand {
       flex-basis: 25%;
       max-width: 25%;
 
-      @include screen('mobile') {
+      @include screen("mobile") {
         width: 50%;
         flex-basis: 50%;
         max-width: 50%;
       }
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 100%;
         flex-basis: 100%;
         max-width: 100%;
@@ -482,7 +486,7 @@ select::-ms-expand {
       flex-basis: calc(25% - 0.6em);
       max-width: calc(25% - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
         max-width: calc(100% - 0.6em);
@@ -496,7 +500,7 @@ select::-ms-expand {
       flex-basis: calc(100% / 6);
       max-width: calc(100% / 6);
 
-      @include screen('mobile') {
+      @include screen("mobile") {
         width: 50%;
         flex-basis: 50%;
         max-width: 50%;
@@ -514,7 +518,7 @@ select::-ms-expand {
       flex-basis: calc(100% / 6 - 0.6em);
       max-width: calc(100% / 6 - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(50% - 0.6em);
         flex-basis: calc(50% - 0.6em);
         max-width: calc(50% - 0.6em);
@@ -528,7 +532,7 @@ select::-ms-expand {
       flex-basis: 25%;
       max-width: 25%;
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 100%;
         flex-basis: 100%;
         max-width: 100%;
@@ -538,7 +542,7 @@ select::-ms-expand {
         flex-basis: 75%;
         max-width: 75%;
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 100%;
           flex-basis: 100%;
           max-width: 100%;
@@ -552,7 +556,7 @@ select::-ms-expand {
       max-width: calc(25% - 0.6em);
       flex-basis: calc(25% - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(25% - 0.6em);
         max-width: calc(25% - 0.6em);
         flex-basis: calc(100% - 0.6em);
@@ -562,7 +566,7 @@ select::-ms-expand {
         flex-basis: calc(75% - 0.6em);
         max-width: calc(75% - 0.6em);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
           flex-basis: calc(100% - 0.6em);
           max-width: calc(100% - 0.6em);
@@ -577,7 +581,7 @@ select::-ms-expand {
       max-width: 75%;
       width: 75%;
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         flex-basis: 100%;
         max-width: 100%;
         width: 100%;
@@ -587,7 +591,7 @@ select::-ms-expand {
         max-width: 25%;
         width: 25%;
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           flex-basis: 100%;
           max-width: 100%;
           width: 100%;
@@ -601,7 +605,7 @@ select::-ms-expand {
       max-width: calc(75% - 0.6em);
       flex-basis: calc(75% - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(100% - 0.6em);
         max-width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
@@ -612,7 +616,7 @@ select::-ms-expand {
         max-width: calc(25% - 0.6em);
         flex-basis: calc(25% - 0.6em);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
           max-width: calc(100% - 0.6em);
           flex-basis: calc(100% - 0.6em);
@@ -627,7 +631,7 @@ select::-ms-expand {
       flex-basis: 25%;
       max-width: 25%;
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 50%;
         flex-basis: 50%;
         max-width: 50%;
@@ -637,7 +641,7 @@ select::-ms-expand {
         flex-basis: 50%;
         max-width: 50%;
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 100%;
           flex-basis: 100%;
           max-width: 100%;
@@ -651,7 +655,7 @@ select::-ms-expand {
       max-width: calc(25% - 0.6em);
       flex-basis: calc(25% - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(50% - 0.6em);
         max-width: calc(50% - 0.6em);
         flex-basis: calc(50% - 0.6em);
@@ -661,7 +665,7 @@ select::-ms-expand {
         max-width: calc(50% - 0.6em);
         flex-basis: calc(50% - 0.6em);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
           max-width: calc(100% - 0.6em);
           flex-basis: calc(100% - 0.6em);
@@ -672,13 +676,13 @@ select::-ms-expand {
 
   .formCol_6_3_3 {
     & > .formGrp,
-    & > input[type='text'],
+    & > input[type="text"],
     & > select {
       width: 25%;
       flex-basis: 25%;
       max-width: 25%;
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 50%;
         max-width: 50%;
         flex-basis: 50%;
@@ -686,14 +690,14 @@ select::-ms-expand {
     }
 
     & > .formGrp,
-    & > input[type='text'],
+    & > input[type="text"],
     & > select {
       &:first-child {
         width: 50%;
         max-width: 50%;
         flex-basis: 50%;
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 100%;
           max-width: 100%;
           flex-basis: 100%;
@@ -708,7 +712,7 @@ select::-ms-expand {
       max-width: calc(100% / 3);
       flex-basis: calc(100% / 3);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 50%;
         max-width: 50%;
         flex-basis: 50%;
@@ -718,7 +722,7 @@ select::-ms-expand {
         max-width: calc(100% / 3 * 2);
         flex-basis: calc(100% / 3 * 2);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 100%;
           max-width: 100%;
           flex-basis: 100%;
@@ -733,7 +737,7 @@ select::-ms-expand {
       max-width: calc(100% / 3 - 0.6em);
       flex-basis: calc(100% / 3 - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(100% - 0.6em);
         max-width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
@@ -743,7 +747,7 @@ select::-ms-expand {
         max-width: calc(100% / 3 * 2 - 0.6em);
         flex-basis: calc(100% / 3 * 2 - 0.6em);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
           max-width: calc(100% - 0.6em);
           flex-basis: calc(100% - 0.6em);
@@ -758,7 +762,7 @@ select::-ms-expand {
       max-width: calc(100% / 6);
       flex-basis: calc(100% / 6);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 100%;
         max-width: 100%;
         flex-basis: 100%;
@@ -768,7 +772,7 @@ select::-ms-expand {
         flex-basis: calc(100% / 12 * 10);
         width: calc(100% / 12 * 10);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           max-width: 100%;
           flex-basis: 100%;
           width: 100%;
@@ -783,7 +787,7 @@ select::-ms-expand {
       max-width: calc(100% / 12 * 2 - 0.6em);
       flex-basis: calc(100% / 12 * 2 - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(100% - 0.6em);
         max-width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
@@ -793,7 +797,7 @@ select::-ms-expand {
         max-width: calc(100% / 12 * 10 - 0.6em);
         flex-basis: calc(100% / 12 * 10 - 0.6em);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
           max-width: calc(100% - 0.6em);
           flex-basis: calc(100% - 0.6em);
@@ -808,7 +812,7 @@ select::-ms-expand {
       max-width: calc(100% / 6);
       flex-basis: calc(100% / 6);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 100%;
         max-width: 100%;
         flex-basis: 100%;
@@ -818,7 +822,7 @@ select::-ms-expand {
         max-width: calc(100% / 12 * 10);
         flex-basis: calc(100% / 12 * 10);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 100%;
           max-width: 100%;
           flex-basis: 100%;
@@ -833,7 +837,7 @@ select::-ms-expand {
       max-width: calc(100% / 12 * 2 - 0.6em);
       flex-basis: calc(100% / 12 * 2 - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(100% - 0.6em);
         max-width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
@@ -843,7 +847,7 @@ select::-ms-expand {
         max-width: calc(100% / 12 * 10 - 0.6em);
         flex-basis: calc(100% / 12 * 10 - 0.6em);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
           max-width: calc(100% - 0.6em);
           flex-basis: calc(100% - 0.6em);
@@ -858,7 +862,7 @@ select::-ms-expand {
       max-width: calc(100% / 12 * 2);
       flex-basis: calc(100% / 12 * 2);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 50%;
         max-width: 50%;
         flex-basis: 50%;
@@ -868,7 +872,7 @@ select::-ms-expand {
         max-width: calc(100% / 12 * 8);
         flex-basis: calc(100% / 12 * 8);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 100%;
           max-width: 100%;
           flex-basis: 100%;
@@ -883,7 +887,7 @@ select::-ms-expand {
       max-width: calc(100% / 12 * 2 - 0.6em);
       flex-basis: calc(100% / 12 * 2 - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(50% - 0.6em);
         max-width: calc(50% - 0.6em);
         flex-basis: calc(50% - 0.6em);
@@ -893,7 +897,7 @@ select::-ms-expand {
         max-width: calc(100% / 12 * 8 - 0.6em);
         flex-basis: calc(100% / 12 * 8 - 0.6em);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
           max-width: calc(100% - 0.6em);
           flex-basis: calc(100% - 0.6em);
@@ -908,7 +912,7 @@ select::-ms-expand {
       max-width: calc(100% / 12 * 2);
       flex-basis: calc(100% / 12 * 2);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: 50%;
         max-width: 50%;
         flex-basis: 50%;
@@ -918,7 +922,7 @@ select::-ms-expand {
         max-width: calc(100% / 12 * 8);
         flex-basis: calc(100% / 12 * 8);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: 100%;
           max-width: 100%;
           flex-basis: 100%;
@@ -933,7 +937,7 @@ select::-ms-expand {
       max-width: calc(100% / 12 * 2 - 0.6em);
       flex-basis: calc(100% / 12 * 2 - 0.6em);
 
-      @include screen('xsMobile') {
+      @include screen("xsMobile") {
         width: calc(50% - 0.6em);
         max-width: calc(50% - 0.6em);
         flex-basis: calc(50% - 0.6em);
@@ -944,7 +948,7 @@ select::-ms-expand {
         max-width: calc(100% / 12 * 8 - 0.6em);
         flex-basis: calc(100% / 12 * 8 - 0.6em);
 
-        @include screen('xsMobile') {
+        @include screen("xsMobile") {
           width: calc(100% - 0.6em);
           max-width: calc(100% - 0.6em);
           flex-basis: calc(100% - 0.6em);
@@ -959,19 +963,19 @@ select::-ms-expand {
     .btn,
     .btnReset,
     .btnSubmit,
-    input[type='submit'],
-    input[type='reset'],
-    input[type='button'],
-    input[type='search'] {
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    input[type="search"] {
       margin: 0.3em;
     }
   }
 
   .btn,
-  input[type='submit'],
-  input[type='reset'],
-  input[type='button'],
-  input[type='search'] {
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  input[type="search"] {
     flex: 1 1 auto;
   }
 
@@ -987,7 +991,7 @@ select::-ms-expand {
     width: 100%;
     padding: 0.3em 0;
 
-    @include screen('mobile') {
+    @include screen("mobile") {
       flex-wrap: wrap;
     }
   }
@@ -1011,7 +1015,7 @@ select::-ms-expand {
               height: 1em;
               border-radius: 50%;
               background: #54caff;
-              content: '';
+              content: "";
               left: 0.35em;
               top: 0.3em;
               z-index: -1;
@@ -1062,8 +1066,8 @@ select::-ms-expand {
         flex: 0 1 auto;
       }
 
-      input[type='checkbox'],
-      input[type='radio'] {
+      input[type="checkbox"],
+      input[type="radio"] {
         width: 1em;
       }
     }
@@ -1090,16 +1094,16 @@ select::-ms-expand {
     }
   }
 
-  input[type='text'],
-  input[type='password'],
+  input[type="text"],
+  input[type="password"],
   select,
   textarea,
   button,
   .btn,
-  input[type='submit'],
-  input[type='reset'],
-  input[type='button'],
-  input[type='search'],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  input[type="search"],
   .input_i {
     width: auto;
     flex: 0 0 auto;
@@ -1123,10 +1127,10 @@ select::-ms-expand {
     padding: 0;
 
     .btn,
-    input[type='submit'],
-    input[type='reset'],
-    input[type='button'],
-    input[type='search'] {
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    input[type="search"] {
       margin: 0.3em;
       padding: 0.45em 1em;
     }
@@ -1141,7 +1145,7 @@ legend {
   margin: 0 0 0.5em 0;
   @include gutter(0.6em);
 
-  @include screen('xsMobile') {
+  @include screen("xsMobile") {
     display: block;
   }
 
@@ -1183,7 +1187,7 @@ textarea {
   -moz-appearance: none;
   appearance: none;
 
-  @include screen('mobile') {
+  @include screen("mobile") {
     width: 100%;
   }
 }
@@ -1195,12 +1199,12 @@ textarea {
 }
 
 //---------------------------------------------文字輸入表單--------//
-input[type='text'],
-input[type='password'],
-input[type='file'],
-input[type='tel'],
-input[type='mail'],
-input[type='number'] {
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="tel"],
+input[type="mail"],
+input[type="number"] {
   &::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: darken($colorGray, 20);
@@ -1238,18 +1242,18 @@ textarea {
   height: 5em;
   overflow-y: scroll;
 
-  @include screen('xsMobile') {
+  @include screen("xsMobile") {
     width: 100%;
   }
 }
 
 button:focus-visible,
-input[type='text']:focus-visible,
-input[type='reset']:focus-visible,
-input[type='file']:focus-visible,
-input[type='tel']:focus-visible,
-input[type='email']:focus-visible,
-input[type='password']:focus-visible,
+input[type="text"]:focus-visible,
+input[type="reset"]:focus-visible,
+input[type="file"]:focus-visible,
+input[type="tel"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="password"]:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
   // border: 1px solid lighten($formFocus, 20);
@@ -1257,12 +1261,12 @@ select:focus-visible {
   outline: none;
 }
 button:focus,
-input[type='text']:focus,
-input[type='reset']:focus,
-input[type='file']:focus,
-input[type='tel']:focus,
-input[type='email']:focus,
-input[type='password']:focus,
+input[type="text"]:focus,
+input[type="reset"]:focus,
+input[type="file"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
 textarea:focus,
 select:focus {
   outline: none;
@@ -1274,7 +1278,8 @@ select {
   line-height: 1.35em;
   padding: 0.5em 24px 0.5em 0.5em;
   border: 1px solid $colorGray;
-  background: #fff url(../images/icon/icon_select_arrow.svg) no-repeat right center;
+  background: #fff url(../images/icon/icon_select_arrow.svg) no-repeat right
+    center;
   background-size: 16px;
 
   option {
@@ -1296,8 +1301,8 @@ select {
 // }
 
 //---------------------------------------------checkbox & radio--------//
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   font-size: 1em;
   margin: 0.3em;
   width: 1em;
@@ -1306,20 +1311,20 @@ input[type='radio'] {
   border: 2px solid $colorGray;
 }
 
-input[type='radio'] {
+input[type="radio"] {
   border-radius: 50%;
 }
 
-input[type='checkbox']:checked,
-input[type='checkbox']:focus,
-input[type='radio']:checked,
-input[type='radio']:focus {
+input[type="checkbox"]:checked,
+input[type="checkbox"]:focus,
+input[type="radio"]:checked,
+input[type="radio"]:focus {
   border-color: $formFocus;
   background-color: $formFocus;
   outline: none;
 }
 
-input[type='checkbox']:checked {
+input[type="checkbox"]:checked {
   background-image: url(../images/basic/icon_checked.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -1328,13 +1333,13 @@ input[type='checkbox']:checked {
   border-radius: 2px;
 }
 
-input[type='radio']:focus {
+input[type="radio"]:focus {
   border-color: $formFocus;
   background-color: $formFocus;
   box-shadow: #fff 0 0 0 3px inset, $formFocus 0 0 0 2px;
 }
 
-input[type='checkbox']:focus {
+input[type="checkbox"]:focus {
   border-color: $formFocus;
   background-color: $formFocus;
   box-shadow: $formFocus 0 0 0 2px;
@@ -1386,7 +1391,7 @@ input[type='checkbox']:focus {
   }
 }
 
-input[type='file'] {
+input[type="file"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -1485,13 +1490,13 @@ abbr[title] {
   top: 50%;
   transform: translateY(-50%);
   &::before {
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     display: block;
-    background: url('../images/icon/icon_eye_c_dark.svg') center no-repeat;
+    background: url("../images/icon/icon_eye_c_dark.svg") center no-repeat;
   }
   &.hide::before {
-    background: url('../images/icon/icon_eye_dark.svg') center no-repeat;
+    background: url("../images/icon/icon_eye_dark.svg") center no-repeat;
   }
 }

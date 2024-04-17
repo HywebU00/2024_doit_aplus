@@ -7,28 +7,30 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0;
     padding: 1em 0;
     list-style-type: none;
   }
   li {
-    flex: 1 1 48%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: calc((100% - 10px) / 2);
     margin-bottom: 10px;
     border-radius: 5px;
     &:nth-child(odd) {
       margin-right: 10px;
     }
 
-    @include screen('mobile') {
+    @include screen("mobile") {
       flex: 1 1 100%;
       &:nth-child(odd) {
         margin-right: 0;
       }
     }
     a {
-      border: 1px solid #ddd;
-      padding: 1em 1em 1em 2.5em;
+      border: 1px solid $colorPrimary;
+      padding: 1em 1em 1em 3.5em;
       display: block;
       vertical-align: top;
       position: relative;
@@ -36,6 +38,8 @@
       box-sizing: border-box;
       @include aSetting($colorWord);
       // @include textOverflow;
+      background: #fff url(../images/arrow_more.png) 1em center no-repeat;
+      transition: 0.5s all;
       .num {
         position: absolute;
         width: 1em;
@@ -43,13 +47,14 @@
         left: 0.5em;
         text-align: right;
         &:after {
-          content: '.';
+          content: ".";
         }
       }
       &:hover,
       &:focus-visible {
         border: 1px solid $aHover;
         color: $aHover;
+        background: #fff url(../images/arrow_more.png) 1.5em center no-repeat;
       }
     }
   }

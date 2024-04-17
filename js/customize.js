@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
 
   // 手風琴功能
   accordionFunction({
-    target: '.accordion',
+    target: '.questionAccordion .accordion',
     openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
     autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
     openSwitch: true, // 是否可開合

@@ -6,15 +6,15 @@
       }
       &.date {
         text-align: center;
-        color: #666;
-        @include screen('mobile') {
+        color: #000;
+        @include screen("mobile") {
           text-align: left;
         }
       }
       &.num {
         text-align: center;
-        color: #666;
-        @include screen('mobile') {
+        color: #000;
+        @include screen("mobile") {
           text-align: left;
         }
       }
@@ -50,7 +50,7 @@
             top: 0;
             left: 0;
             &:after {
-              content: '.';
+              content: ".";
               display: inline-block;
             }
           }
@@ -59,7 +59,7 @@
           display: inline-block;
           font-size: 0.938em;
           font-weight: normal;
-          @include screen('mobile') {
+          @include screen("mobile") {
             display: block;
           }
         }

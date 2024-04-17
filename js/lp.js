@@ -187,7 +187,7 @@ accordionFunctions({
   autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
   duration: 200,
   info: {
-    open: '', // 收合時顯示
-    close: '', // 展開時顯示
+    open: '展開', // 收合時顯示
+    close: '收合', // 展開時顯示
   },
 });

@@ -4,7 +4,6 @@
   }
 
   .title {
-    border-radius: 0.5rem 0.5rem 0 0;
     font-weight: 400;
 
     background: $colorPrimary;
@@ -50,31 +49,39 @@
             border-radius: 0rem;
             &:hover,
             &:focus {
-              background: darken($colorGray, 18%);
+              // background: darken($colorGray, 18%);
+              color: #fff;
+              background: $colorSecondary;
             }
           }
 
           &.active {
             > button {
-              background: darken($colorGray, 18%);
+              // background: darken($colorGray, 18%);
               // background: lighten($colorSecondary, 25%);
+              color: #fff;
+              background: $colorSecondary;
             }
           }
-          // ul {
-          //   li {
-          //     button {
-          //       &:hover,
-          //       &:focus {
-          //         background: $colorInfo;
-          //       }
-          //     }
-          //   }
-          //   li.active {
-          //     button {
-          //       background: $colorInfo;
-          //     }
-          //   }
-          // }
+          ul {
+            li {
+              button {
+                &:hover,
+                &:focus {
+                  // background: $colorInfo;
+                  color: #000;
+                  background: darken($colorGray, 18%);
+                }
+              }
+            }
+            li.active {
+              button {
+                // background: $colorInfo;
+                color: #000;
+                background: darken($colorGray, 18%);
+              }
+            }
+          }
         }
       }
       .active .accordionArrow {

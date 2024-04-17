@@ -50,6 +50,18 @@ body {
     line-height: 1.25em;
   }
 }
+.inkv {
+  @include screen("mobile") {
+    display: none;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0;
+    img {
+      display: block;
+    }
+  }
+}
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerPage ClassName
 .innerPage {

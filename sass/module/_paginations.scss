@@ -46,10 +46,15 @@
           color: #fff;
           background: $formFocus;
           border: darken($formFocus, 5) solid 1px;
+          &:hover,
+          &:focus-visible {
+            background: $colorPrimary;
+            border: $colorPrimary solid 1px;
+          }
         }
       }
       %arrow {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -123,10 +128,14 @@
     display: flex;
     align-items: center;
     vertical-align: middle;
+    @include screen("mobile") {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     select {
       margin: 0px 0.5em;
-      @include screen('mobile') {
-        margin: 0px;
+      @include screen("mobile") {
+        // margin: 0px;
       }
     }
     .btn {
@@ -148,7 +157,7 @@
     }
   }
 }
-@include screen('mobile') {
+@include screen("mobile") {
   .pagination .total select.formControl {
     margin: 0px 0px;
     text-align: center;

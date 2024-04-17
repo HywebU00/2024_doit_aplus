@@ -7,21 +7,22 @@
     flex-wrap: wrap;
 
     li {
-      margin: 0px 3px 3px 0px;
+      margin: 0px 8px 3px 0px;
       display: block;
     }
   }
   a {
-    border: 1px solid #aaa;
+    border: 1px solid $colorSecondary;
+    background: $colorSecondary;
     padding: 0.25em 0.75em;
     display: block;
-    color: #333;
-    font-size: 0.875rem;
+    color: #fff;
+    // font-size: 0.875rem;
     box-sizing: border-box;
-    &:before {
-      content: '#';
-      margin-right: 0.25em;
-    }
+    // &:before {
+    //   content: "#";
+    //   margin-right: 0.25em;
+    // }
     &:hover,
     &:focus,
     &.active {
@@ -33,11 +34,11 @@
     span {
       font-size: 0.813em;
       &:before {
-        content: '(';
+        content: "(";
         display: inline-block;
       }
       &:after {
-        content: ')';
+        content: ")";
         display: inline-block;
       }
     }
