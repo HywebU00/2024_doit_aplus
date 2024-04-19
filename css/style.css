@@ -1906,60 +1906,64 @@ img {
       max-width: calc(8.3333333333% * 8 - 4px);
     }
   }
-  .cp {
+  .cp, .apply {
     font-size: 1.0666666em;
     line-height: 1.65em;
   }
   @media screen and (max-width: 575px) {
-    .cp {
+    .cp, .apply {
       font-size: 1.2em;
     }
   }
-  .cp h1 {
+  .cp h1, .apply h1 {
     font-size: 2em;
   }
-  .cp h2 {
+  .cp h2, .apply h2 {
     font-size: 1.75em;
     margin-bottom: 1.25em;
   }
-  .cp h3 {
+  .cp h3, .apply h3 {
     font-size: 1.5em;
   }
-  .cp h4 {
+  .cp h4, .apply h4 {
     font-size: 1.25em;
     margin-top: 0;
     margin-bottom: 1em;
   }
-  .cp h5 {
+  .cp h5, .apply h5 {
     font-size: 1.125em;
     margin-top: 0;
     margin-bottom: 1em;
   }
-  .cp h6 {
+  .cp h6, .apply h6 {
     font-size: 1.125em;
     margin-top: 0;
     margin-bottom: 1em;
   }
-  .cp p {
+  .cp p, .apply p {
     font-size: 1em;
     line-height: 1.85em;
     margin-top: 0;
   }
-  .cp ul,
-  .cp ol {
+  .cp ul, .apply ul,
+  .cp ol,
+  .apply ol {
     font-size: 1em;
     margin-bottom: 1em;
   }
-  .cp ul li,
-  .cp ol li {
+  .cp ul li, .apply ul li,
+  .cp ol li,
+  .apply ol li {
     margin-bottom: 0.5em;
   }
-  .cp dd,
+  .cp dd, .apply dd,
   .cp th,
-  .cp td figure {
+  .apply th,
+  .cp td figure,
+  .apply td figure {
     font-size: 1em;
   }
-  .cp blockquote {
+  .cp blockquote, .apply blockquote {
     background: #f1f1f1;
     font-style: normal;
     display: block;
@@ -1970,11 +1974,11 @@ img {
             box-sizing: border-box;
     margin: 0 0em 2em;
   }
-  .cp img {
+  .cp img, .apply img {
     max-width: 100%;
   }
   @media screen and (max-width: 939px) {
-    .cp img {
+    .cp img, .apply img {
       max-width: 100%;
       width: auto;
       clear: both;
@@ -3171,13 +3175,13 @@ img {
     background: #b5deff;
     border: solid 1px #b5deff;
   }
-  .btnNormal {
+  .btnNormal, .formCard .formGrp .btnVerify {
     background: #f1f1f1;
     color: #65656e;
     border: solid 1px #c3c3c3;
     text-shadow: none;
   }
-  .btnNormal:hover, .btnNormal:focus-visible {
+  .btnNormal:hover, .formCard .formGrp .btnVerify:hover, .btnNormal:focus-visible, .formCard .formGrp .btnVerify:focus-visible {
     color: #404046;
     background: #c3c3c3;
     border: solid 1px #c3c3c3;
@@ -3216,7 +3220,6 @@ img {
     font-size: 0.75em;
   }
   .breadcrumb {
-    border-bottom: 1px solid #eee;
     padding: 0.1em 0em 0.1em;
     font-size: 0.813em;
     margin: 0px auto 5px;
@@ -6426,7 +6429,7 @@ img {
     margin: 0.3em;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    border-radius: 0.2em;
+    border-radius: 0;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
   }
@@ -6494,7 +6497,7 @@ img {
     margin: 0.3em;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    border-radius: 0.2em;
+    border-radius: 0;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     height: 5em;
@@ -6748,9 +6751,10 @@ img {
     word-break: break-all;
   }
   table th {
-    background-color: #f3f3f3;
-    color: #333;
+    background-color: #696c71;
+    color: #fff;
     border: #ddd 1px solid;
+    border-bottom: 0;
     text-align: center;
     white-space: nowrap;
   }
@@ -7694,7 +7698,6 @@ img {
   .pagination .page li a {
     min-width: 40px;
     height: 40px;
-    border-radius: 5px;
     padding: 6px 10px;
     font-weight: 700;
     display: block;
@@ -9583,7 +9586,7 @@ img {
     line-height: 1.25em;
     margin: 0.5em 0;
   }
-  .cp .pic {
+  .cp .pic, .apply .pic {
     float: left;
     margin: 0px 1em 1em 0;
     width: auto;
@@ -9593,19 +9596,19 @@ img {
     overflow: hidden;
     padding: 0.5em 0.5em 0.2em;
   }
-  .cp .pic img {
+  .cp .pic img, .apply .pic img {
     float: none;
     width: 100%;
     margin: 0;
     display: block;
   }
-  .cp .pic span {
+  .cp .pic span, .apply .pic span {
     text-align: center;
     display: block;
     font-size: 0.938em;
   }
   @media screen and (max-width: 939px) {
-    .cp .pic {
+    .cp .pic, .apply .pic {
       float: none;
       max-width: 100%;
       width: auto;
@@ -9614,49 +9617,49 @@ img {
       margin-bottom: 0.5em;
     }
   }
-  .cp table {
+  .cp table, .apply table {
     background: #fff;
   }
-  .cp img.floatLeft {
+  .cp img.floatLeft, .apply img.floatLeft {
     float: left;
     margin: 0px 1em 1em 0;
     width: auto;
     max-width: 55%;
   }
   @media screen and (max-width: 939px) {
-    .cp img.floatLeft {
+    .cp img.floatLeft, .apply img.floatLeft {
       float: none;
       max-width: 100%;
       margin: 0px auto;
     }
   }
-  .cp img.floatRight {
+  .cp img.floatRight, .apply img.floatRight {
     float: right;
     margin: 0px 0 1em 1em;
     width: auto;
     max-width: 55%;
   }
   @media screen and (max-width: 939px) {
-    .cp img.floatRight {
+    .cp img.floatRight, .apply img.floatRight {
       float: none;
       max-width: 100%;
       margin: 0px auto;
     }
   }
-  .cp a {
+  .cp a, .apply a {
     text-decoration: none;
     color: #4487b0;
   }
-  .cp a:hover, .cp a:focus-visible {
+  .cp a:hover, .apply a:hover, .cp a:focus-visible, .apply a:focus-visible {
     color: #4487b0;
     cursor: pointer;
   }
-  .cp a:focus-visible {
+  .cp a:focus-visible, .apply a:focus-visible {
     outline: none;
     -webkit-box-shadow: 0 0px 0px 2px #4487b0 inset;
             box-shadow: 0 0px 0px 2px #4487b0 inset;
   }
-  .cp .publishInfo {
+  .cp .publishInfo, .apply .publishInfo {
     font-size: 0.875em;
     line-height: 1.5em;
     list-style: none;
@@ -9672,21 +9675,22 @@ img {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .cp .publishInfo li {
+  .cp .publishInfo li, .apply .publishInfo li {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 33.3333333333%;
             flex: 1 1 33.3333333333%;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
   }
   @media screen and (max-width: 1199px) {
-    .cp .publishInfo li {
+    .cp .publishInfo li, .apply .publishInfo li {
       -webkit-box-flex: 1;
           -ms-flex: 1 1 50%;
               flex: 1 1 50%;
+      margin-bottom: 0.5em;
     }
   }
   @media screen and (max-width: 939px) {
-    .cp .publishInfo li {
+    .cp .publishInfo li, .apply .publishInfo li {
       -webkit-box-flex: 1;
           -ms-flex: 1 1 100%;
               flex: 1 1 100%;
@@ -10249,6 +10253,11 @@ img {
       width: 100%;
     }
   }
+  .conditional_searchblock .btnReset {
+    background: #696c71;
+    color: #fff;
+    border: 1px solid #696c71;
+  }
   .cjkList li {
     list-style-type: cjk-ideographic;
   }
@@ -10398,6 +10407,227 @@ img {
   .lp .accordion .aList a {
     margin-right: 0 0.5em;
     text-decoration: underline;
+  }
+  .apply {
+    font-size: 1em;
+  }
+  .apply table {
+    margin-bottom: 2em;
+  }
+  .apply table .date,
+  .apply table .time,
+  .apply table .tel,
+  .apply table .mail {
+    text-align: center;
+    white-space: nowrap;
+  }
+  @media screen and (max-width: 939px) {
+    .apply table .date,
+    .apply table .time,
+    .apply table .tel,
+    .apply table .mail {
+      text-align: start;
+    }
+  }
+  .apply table .status {
+    text-align: center;
+  }
+  .apply table .btn {
+    padding: 0.25em 1.25em;
+  }
+  .apply .formGrid {
+    border: 0;
+  }
+  .apply .formCard .textCenter {
+    margin: 1em 0;
+  }
+  .formCard {
+    padding: 2em;
+    -webkit-box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+  }
+  .formCard h3 {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .formCard .formGrp .btnVerify {
+    margin: 0.25em 0.3em;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+  .formCard .formGrp .btnVerify .i_mail_dark:before {
+    -webkit-filter: contrast(0.3);
+            filter: contrast(0.3);
+  }
+  .formCard .formGrp .formTitle {
+    max-width: 160px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 160px;
+            flex: 0 0 160px;
+  }
+  .formCard .formGrp .formContent {
+    max-width: calc(100% - 160px);
+  }
+  @media screen and (max-width: 1199px) {
+    .formCard .formGrp .formContent {
+      max-width: 100%;
+    }
+  }
+  .formCard .formGrp:last-child {
+    border-bottom: none;
+  }
+  .formCard .statement {
+    padding: 0 1em;
+  }
+  .formCard .agree {
+    padding-top: 1em;
+    border-top: 1px #ddd dashed;
+  }
+  .formCard .textCenter {
+    text-align: center;
+  }
+  .note {
+    margin: 0 0 1em 1em;
+  }
+  .infoBlock {
+    background: #1c234c;
+    padding: 1.5em;
+    margin: 0.5em 0.5em 1em 0.5em;
+    color: #fff;
+  }
+  .infoBlock p {
+    margin-bottom: 0;
+  }
+  .infoBlock p span {
+    color: #6fdaff;
+  }
+  .infoBlock .title {
+    font-weight: bold;
+  }
+  .infoBlock .event {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .infoBlock .event .title {
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 0.75em 0 0;
+  }
+  .infoBlock .event li:last-child {
+    margin-bottom: 0;
+  }
+  .eventList {
+    -webkit-box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1.5em 0;
+  }
+  .eventList ul {
+    list-style: none;
+    padding: 0 0.5em;
+  }
+  .eventList ul li {
+    margin: 0.75em 0;
+    display: block;
+    border-bottom: 1px dashed #ddd;
+  }
+  .eventList ul li:last-child {
+    border: none;
+    margin-bottom: 0;
+  }
+  .eventList ul .title {
+    background: #1c234c;
+    display: inline-block;
+    color: #fff;
+    padding: 0.1em 0.5em;
+    margin: 0 0.5em 0.75em 0;
+  }
+  .eventUl {
+    padding-left: 0;
+    list-style: none;
+  }
+  .eventUl > li > ul {
+    list-style: disc;
+  }
+  .eventUl > li span {
+    font-weight: bold;
+  }
+  .progress {
+    list-style: none;
+    padding: 0;
+    display: table;
+    table-layout: fixed;
+    width: 90%;
+    color: #787878;
+    margin: 3em auto;
+  }
+  .progress.serveProgress {
+    width: 70%;
+  }
+  .progress > li {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    font-size: 1em;
+  }
+  .progress > li:before {
+    content: attr(data-step);
+    display: block;
+    margin: 0 auto;
+    background: #ccc;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    margin-bottom: 0.25em;
+    line-height: 3em;
+    border-radius: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  .progress > li:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #ccc;
+    width: 100%;
+    height: 0.2em;
+    top: 1.5em;
+    left: 50%;
+    margin-left: 0.1666666667em;
+    z-index: -1;
+  }
+  .progress > li:last-child:after {
+    display: none;
+  }
+  .progress > li.complete {
+    color: #1c234c;
+  }
+  .progress > li.complete:before, .progress > li.complete:after {
+    color: #fff;
+    background: #1c234c;
+  }
+  .progress > li.active {
+    color: #4487b0;
+  }
+  .progress > li.active:before {
+    color: #fff;
+    background: #4487b0;
+  }
+  @media screen and (max-width: 1199px) {
+    .progress li {
+      font-size: 0.8em;
+    }
+  }
+  @media screen and (max-width: 939px) {
+    .progress {
+      width: 100%;
+    }
+  }
+  .serve .formGrid {
+    border: 0;
   }
 }
 .colorA a:hover {
@@ -10599,13 +10829,13 @@ img {
             box-shadow: none;
   }
 }
-.colorA .cp a {
+.colorA .cp a, .colorA .apply a {
   color: #298729;
 }
-.colorA .cp a:hover, .colorA .cp a:focus-visible {
+.colorA .cp a:hover, .colorA .apply a:hover, .colorA .cp a:focus-visible, .colorA .apply a:focus-visible {
   color: #237323;
 }
-.colorA .cp .publishInfo {
+.colorA .cp .publishInfo, .colorA .apply .publishInfo {
   border-color: #298729;
 }
 .colorA .fileDownload h3 {
@@ -10892,13 +11122,13 @@ img {
             box-shadow: none;
   }
 }
-.colorB .cp a {
+.colorB .cp a, .colorB .apply a {
   color: #c32727;
 }
-.colorB .cp a:hover, .colorB .cp a:focus-visible {
+.colorB .cp a:hover, .colorB .apply a:hover, .colorB .cp a:focus-visible, .colorB .apply a:focus-visible {
   color: #ae2323;
 }
-.colorB .cp .publishInfo {
+.colorB .cp .publishInfo, .colorB .apply .publishInfo {
   border-color: #c32727;
 }
 .colorB .fileDownload h3 {
@@ -11017,7 +11247,7 @@ img {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .cp {
+  .cp, .apply {
     position: relative;
     min-height: 1px;
     padding-left: 0;

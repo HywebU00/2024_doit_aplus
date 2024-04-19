@@ -81,9 +81,10 @@ h2.title {
 
     li {
       flex: 1 1 calc(100% / 3);
-      margin-bottom: 0.5em;
+      margin-bottom: 0;
       @include screen("tablet") {
         flex: 1 1 calc(100% / 2);
+        margin-bottom: 0.5em;
       }
       @include screen("mobile") {
         flex: 1 1 calc(100% / 1);
