@@ -10125,85 +10125,61 @@ img {
     padding: 1rem 0.5rem;
     margin: 0;
   }
-  .leftBlock .nodeMenu .accordion ul {
+  .leftBlock .accordion ul {
     padding: 0;
   }
-  .leftBlock .nodeMenu .accordion ul li {
-    font-weight: bold;
-    color: #000;
-    margin: 0;
-    padding: 0;
+  .leftBlock .accordion ul .nextLv > a {
+    position: relative;
   }
-  .leftBlock .nodeMenu .accordion ul li .accordionList {
-    padding: 15px 30px 15px 20px;
-  }
-  .leftBlock .nodeMenu .accordion ul li .accordionList .accordionArrow.noItem:after {
-    display: none;
-  }
-  .leftBlock .nodeMenu .accordion ul li .accordionList + .accordionContent .content a {
-    padding-left: 2rem;
-  }
-  .leftBlock .nodeMenu .accordion ul li > a,
-  .leftBlock .nodeMenu .accordion ul li button {
-    margin: 0rem 0.5rem;
-    background: #fff;
-    color: #000;
-    margin: 0;
-    border-radius: 0rem;
-  }
-  .leftBlock .nodeMenu .accordion ul li > a:hover, .leftBlock .nodeMenu .accordion ul li > a:focus,
-  .leftBlock .nodeMenu .accordion ul li button:hover,
-  .leftBlock .nodeMenu .accordion ul li button:focus {
-    color: #fff;
-    background: #4487b0;
-  }
-  .leftBlock .nodeMenu .accordion ul li.active > button {
-    color: #fff;
-    background: #4487b0;
-  }
-  .leftBlock .nodeMenu .accordion ul li ul li button:hover, .leftBlock .nodeMenu .accordion ul li ul li button:focus {
-    color: #000;
-    background: #9e9e9e;
-  }
-  .leftBlock .nodeMenu .accordion ul li ul li.active button {
-    color: #000;
-    background: #9e9e9e;
-  }
-  .leftBlock .nodeMenu .accordion .active .accordionArrow {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: calc(50% - 7px);
-  }
-  .leftBlock .nodeMenu .accordion .accordionArrow {
-    right: 15px;
-  }
-  .leftBlock .nodeMenu .accordion .accordionArrow::after {
-    border: 2px solid #1c234c;
+  .leftBlock .accordion ul .nextLv > a::after {
+    content: "";
+    border: 2px solid #1b224c;
     border-bottom: 0;
     border-left: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: rotate(45deg) translateY(-50%);
+            transform: rotate(45deg) translateY(-50%);
   }
-  .leftBlock .nodeMenu .accordion .content a {
-    padding-left: 1.25rem;
+  .leftBlock .accordion ul li {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
-  .leftBlock .nodeMenu .accordion .accordionContent .content {
+  .leftBlock .accordion ul li a {
+    display: block;
+    padding: 15px 30px 15px 20px;
+    color: #222;
+    font-weight: bold;
+  }
+  .leftBlock .accordion ul li a.active, .leftBlock .accordion ul li a:hover {
+    background: #4487b0;
+    color: #fff;
+  }
+  .leftBlock .accordion ul li ul {
+    display: none;
+  }
+  .leftBlock .accordion ul li ul li a {
     background: #f2f2f2;
-    padding: 0;
+    padding: 15px 30px 15px 32px;
   }
-  .leftBlock .nodeMenu .accordion .accordionContent .content button {
-    background: unset;
-    padding-left: 2rem;
-  }
-  .leftBlock .nodeMenu .accordion .accordionContent .content button:hover {
+  .leftBlock .accordion ul li ul li a.active, .leftBlock .accordion ul li ul li a:hover {
     background: #ccc;
+    color: #000;
   }
-  .leftBlock .nodeMenu .accordion .accordionContent .content button + .accordionContent .content a {
-    padding-left: 3rem;
+  .leftBlock .accordion ul li ul li li {
+    border-bottom: 0;
   }
-  .leftBlock .nodeMenu .accordion .accordionContent .content a {
-    padding-left: 2.5rem;
+  .leftBlock .accordion ul li ul li li a {
+    padding: 12px 30px 12px 48px;
+    background: #fff;
   }
-  .leftBlock .nodeMenu .accordion .accordionContent .content .active button {
-    background: #ccc;
+  .leftBlock .accordion ul li ul li li a.active, .leftBlock .accordion ul li ul li li a:hover {
+    color: #4487b0;
+    background: none;
   }
   .conditional_searchbtn {
     border-radius: 0.25rem;
