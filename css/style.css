@@ -8240,6 +8240,7 @@ img {
   }
   .inkv .container img {
     display: block;
+    width: 100%;
   }
   .innerPage > .container {
     padding-top: 1em;
