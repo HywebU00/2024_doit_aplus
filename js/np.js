@@ -174,30 +174,44 @@
 
 (function leftBlockFunctions() {
   const leftBlock = document.querySelector('.leftBlock');
-  const nodeMenu = document.querySelector('.nodeMenu');
-  const nextLv = leftBlock.querySelectorAll('li');
-  nextLv.forEach((item) => {
-    if (jsChildren(item, 'ul').length > 0) {
-      item.classList.add('nextLv');
-    }
-    item.querySelector('a').addEventListener('click', (e) => {
-      e.target.classList.toggle('active');
-      accordionSlider(e);
-    });
-  });
-
-  nextLv.forEach((item) => {
-    item.querySelector('a').addEventListener('keydown', (e) => {
-      console.log(e.key);
-      if ((e.key === 'Tab' && !e.shiftKey) || e.key === 'Enter') {
-        accordionSlider(e);
-        if (e.target.parentNode.classList.contains('nextLv')) {
-          e.target.parentNode.querySelector('ul').querySelector('a').focus();
+  if(leftBlock) {
+      const nodeMenu = document.querySelector('.nodeMenu');
+      const nextLv = leftBlock.querySelectorAll('li');
+      const activeLink = leftBlock.querySelector('a.active');
+      nextLv.forEach((item) => {
+        if (jsChildren(item, 'ul').length > 0) {
+          item.classList.add('nextLv');
         }
-      } else if (e.key === 'Tab' && e.shiftKey) {
+        item.querySelector('a').addEventListener('click', (e) => {
+          e.target.classList.toggle('active');
+          accordionSlider(e);
+        });
+      });
+
+      nextLv.forEach((item) => {
+        item.querySelector('a').addEventListener('keydown', (e) => {
+          if ((e.key === 'Tab' && !e.shiftKey) || e.key === 'Enter') {
+            accordionSlider(e);
+            if (e.target.parentNode.classList.contains('nextLv')) {
+              e.target.parentNode.querySelector('ul').querySelector('a').focus();
+            }
+          } else if (e.key === 'Tab' && e.shiftKey) {
+          }
+        });
+      });
+
+      if(leftBlock && activeLink) {
+          activeParentNode(activeLink);
       }
-    });
-  });
+  }
+
+  function activeParentNode(e) {
+      const checkNode = e.parentNode.parentNode.parentNode.children[0];
+      if(checkNode.nodeName.toLowerCase() == 'a') {
+          activeParentNode(checkNode);
+          checkNode.click();
+      }
+  }
 
   function accordionSlider(e) {
     if (e.target.parentNode.classList.contains('nextLv')) {
@@ -217,4 +231,6 @@
       }
     });
   }
+
+
 })();
