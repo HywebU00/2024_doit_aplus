@@ -459,7 +459,7 @@ button.swiper-pagination-bullet {
   top: 0;
 }
 .swiper-pagination-lock {
-  display: none;
+  display: block;
 }
 .swiper-scrollbar {
   border-radius: var(--swiper-scrollbar-border-radius, 10px);
