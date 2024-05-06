@@ -10461,6 +10461,9 @@ img {
   .formCard .statement {
     padding: 0 1em;
   }
+  .formCard .statement p {
+    width: 100%;
+  }
   .formCard .agree {
     padding-top: 1em;
     border-top: 1px #ddd dashed;
