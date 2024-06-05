@@ -64,7 +64,7 @@ section {
 .mainSlider {
   position: relative;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   .item {
     a {
       &:focus {
@@ -82,7 +82,7 @@ section {
     }
     img {
       min-height: 200px;
-      aspect-ratio: 1916 / 523;
+      aspect-ratio: 1920 / 350;
       object-fit: cover;
       object-position: center center;
     }

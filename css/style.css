@@ -9110,7 +9110,7 @@ img {
   .mainSlider {
     position: relative;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .mainSlider .item a:focus:before {
     content: "";
@@ -9125,7 +9125,7 @@ img {
   }
   .mainSlider .item img {
     min-height: 200px;
-    aspect-ratio: 1916/523;
+    aspect-ratio: 1920/350;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center center;
