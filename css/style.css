@@ -9197,7 +9197,6 @@ img {
     position: absolute;
     left: 0;
     top: 2px;
-    font-family: "CG Omega";
     font-size: 1.125rem;
   }
   @media screen and (max-width: 939px) {
@@ -9319,7 +9318,6 @@ img {
     margin-bottom: 10px;
   }
   .mpRightBlock .eventSlider .eventInfo .eventDate {
-    font-family: "CG Omega";
     margin-bottom: 8px;
     padding-left: 35px;
     background: url(../images/icon_date.png) no-repeat 0 center;

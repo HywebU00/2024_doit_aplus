@@ -157,7 +157,7 @@ section {
           position: absolute;
           left: 0;
           top: 2px;
-          font-family: "CG Omega";
+          // font-family: "CG Omega";
           font-size: 1.125rem;
           @include screen("mobile") {
             position: relative;
@@ -273,7 +273,7 @@ section {
       color: $colorPrimary;
       margin-bottom: 10px;
       .eventDate {
-        font-family: "CG Omega";
+        // font-family: "CG Omega";
         margin-bottom: 8px;
         padding-left: 35px;
         background: url(../images/icon_date.png) no-repeat 0 center;
