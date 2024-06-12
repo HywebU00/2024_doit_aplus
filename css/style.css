@@ -2174,7 +2174,7 @@ img {
     font-weight: normal;
     color: #000;
     line-height: 1.45em;
-    font-family: Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
+    font-family: "微軟正黑體", "open-sans", Times New Roman, sans-serif;
     -webkit-text-size-adjust: none;
   }
   body.smallSize {
