@@ -71,8 +71,8 @@
         padding: 0.5em 0.5em 0.5em 1em;
         transition: 0.3s ease-out;
 
-        &:hover,
-        &:focus-visible {
+        // &:focus-visible,
+        &:hover {
           background: $colorPrimary;
           border-inline: $aHover 2px solid;
         }

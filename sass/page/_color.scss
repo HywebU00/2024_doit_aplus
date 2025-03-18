@@ -192,8 +192,8 @@ $colorStyleConfig: (
       .btnFatFooter {
         background: map-get($value, colorPrimary);
 
-        &:hover,
-        &:focus {
+        &:focus,
+        &:hover {
           background: darken(map-get($value, colorPrimary), 10);
         }
       }
@@ -409,15 +409,15 @@ $colorStyleConfig: (
       }
     }
 
-    .tabContent {
-      a:focus {
-        box-shadow: 0 0px 0px 2px map-get($value, aFocus) inset;
+    // .tabContent {
+    //   a:focus {
+    //     box-shadow: 0 0px 0px 2px map-get($value, aFocus) inset;
 
-        @include screen('mobile') {
-          box-shadow: none;
-        }
-      }
-    }
+    //     @include screen('mobile') {
+    //       box-shadow: none;
+    //     }
+    //   }
+    // }
 
     //_cp
     .cp {

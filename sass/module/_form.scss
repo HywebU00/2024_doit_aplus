@@ -1,8 +1,6 @@
-@mixin formStyle(
-  $formColor: $colorWord,
+@mixin formStyle($formColor: $colorWord,
   $formBorder: $colorGray,
-  $formRadius: $btnRadius
-) {
+  $formRadius: $btnRadius) {
   color: $formColor;
   font-size: 1em;
   border: 1px solid $formBorder;
@@ -96,6 +94,7 @@ select::-ms-expand {
     flex: 0 0 $formTitleWidth;
     align-self: flex-start;
     padding: 0.3em 1em;
+
     @include screen("mobile") {
       max-width: calc(100% - 0.6em);
       flex-basis: calc(100% - 0.6em);
@@ -104,6 +103,7 @@ select::-ms-expand {
     }
 
     & + .formContent {
+
       // &.formCol_6_6,
       // &.formCol_4_4_4,
       // &.formCol_3_3_3_3,
@@ -199,6 +199,7 @@ select::-ms-expand {
         }
 
         &.formInline {
+
           input[type="text"],
           input[type="tel"],
           select,
@@ -227,6 +228,7 @@ select::-ms-expand {
 
     // 電話專屬
     .tel {
+
       input[type="text"]:first-child,
       input[type="tel"]:first-child {
         background: url(../images/icon/icon_add.svg) no-repeat 0.5em center;
@@ -446,6 +448,7 @@ select::-ms-expand {
         max-width: 100%;
       }
     }
+
     & > input,
     & > select,
     & > label {
@@ -479,6 +482,7 @@ select::-ms-expand {
         max-width: 100%;
       }
     }
+
     & > input,
     & > select,
     & > label {
@@ -511,6 +515,7 @@ select::-ms-expand {
       //     width: 100%;
       // }
     }
+
     & > input,
     & > select,
     & > label {
@@ -537,6 +542,7 @@ select::-ms-expand {
         flex-basis: 100%;
         max-width: 100%;
       }
+
       &:nth-child(2) {
         width: 75%;
         flex-basis: 75%;
@@ -549,6 +555,7 @@ select::-ms-expand {
         }
       }
     }
+
     & > input,
     & > select,
     & > label {
@@ -561,6 +568,7 @@ select::-ms-expand {
         max-width: calc(25% - 0.6em);
         flex-basis: calc(100% - 0.6em);
       }
+
       &:nth-child(2) {
         width: calc(75% - 0.6em);
         flex-basis: calc(75% - 0.6em);
@@ -586,6 +594,7 @@ select::-ms-expand {
         max-width: 100%;
         width: 100%;
       }
+
       &:nth-child(2) {
         flex-basis: 25%;
         max-width: 25%;
@@ -598,6 +607,7 @@ select::-ms-expand {
         }
       }
     }
+
     & > input,
     & > select,
     & > label {
@@ -636,6 +646,7 @@ select::-ms-expand {
         flex-basis: 50%;
         max-width: 50%;
       }
+
       &:last-child {
         width: 50%;
         flex-basis: 50%;
@@ -648,6 +659,7 @@ select::-ms-expand {
         }
       }
     }
+
     & > input,
     & > select,
     & > label {
@@ -660,6 +672,7 @@ select::-ms-expand {
         max-width: calc(50% - 0.6em);
         flex-basis: calc(50% - 0.6em);
       }
+
       &:last-child {
         width: calc(50% - 0.6em);
         max-width: calc(50% - 0.6em);
@@ -675,6 +688,7 @@ select::-ms-expand {
   }
 
   .formCol_6_3_3 {
+
     & > .formGrp,
     & > input[type="text"],
     & > select {
@@ -717,6 +731,7 @@ select::-ms-expand {
         max-width: 50%;
         flex-basis: 50%;
       }
+
       &:last-child {
         width: calc(100% / 3 * 2);
         max-width: calc(100% / 3 * 2);
@@ -742,6 +757,7 @@ select::-ms-expand {
         max-width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
       }
+
       &:last-child {
         width: calc(100% / 3 * 2 - 0.6em);
         max-width: calc(100% / 3 * 2 - 0.6em);
@@ -767,6 +783,7 @@ select::-ms-expand {
         max-width: 100%;
         flex-basis: 100%;
       }
+
       &:last-child {
         max-width: calc(100% / 12 * 10);
         flex-basis: calc(100% / 12 * 10);
@@ -792,6 +809,7 @@ select::-ms-expand {
         max-width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
       }
+
       &:last-child {
         width: calc(100% / 12 * 10 - 0.6em);
         max-width: calc(100% / 12 * 10 - 0.6em);
@@ -817,6 +835,7 @@ select::-ms-expand {
         max-width: 100%;
         flex-basis: 100%;
       }
+
       &:first-child {
         width: calc(100% / 12 * 10);
         max-width: calc(100% / 12 * 10);
@@ -842,6 +861,7 @@ select::-ms-expand {
         max-width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
       }
+
       &:first-child {
         width: calc(100% / 12 * 10 - 0.6em);
         max-width: calc(100% / 12 * 10 - 0.6em);
@@ -867,6 +887,7 @@ select::-ms-expand {
         max-width: 50%;
         flex-basis: 50%;
       }
+
       &:last-child {
         width: calc(100% / 12 * 8);
         max-width: calc(100% / 12 * 8);
@@ -892,6 +913,7 @@ select::-ms-expand {
         max-width: calc(50% - 0.6em);
         flex-basis: calc(50% - 0.6em);
       }
+
       &:last-child {
         width: calc(100% / 12 * 8 - 0.6em);
         max-width: calc(100% / 12 * 8 - 0.6em);
@@ -917,6 +939,7 @@ select::-ms-expand {
         max-width: 50%;
         flex-basis: 50%;
       }
+
       &:first-child {
         width: calc(100% / 12 * 8);
         max-width: calc(100% / 12 * 8);
@@ -1041,6 +1064,7 @@ select::-ms-expand {
 
   &.formInline,
   .formInline {
+
     .checkGrp,
     .radioGrp {
       label {
@@ -1051,6 +1075,7 @@ select::-ms-expand {
 
   .formGrp,
   .uploadGrp {
+
     // 文字表單個別行內設定
     &.formInline {
       label {
@@ -1150,6 +1175,7 @@ legend {
   }
 
   &.inline {
+
     input,
     select,
     textarea {
@@ -1191,6 +1217,7 @@ textarea {
     width: 100%;
   }
 }
+
 //notice 必免語意不清需討論
 .input_i {
   input {
@@ -1247,30 +1274,30 @@ textarea {
   }
 }
 
-button:focus-visible,
-input[type="text"]:focus-visible,
-input[type="reset"]:focus-visible,
-input[type="file"]:focus-visible,
-input[type="tel"]:focus-visible,
-input[type="email"]:focus-visible,
-input[type="password"]:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  // border: 1px solid lighten($formFocus, 20);
-  box-shadow: 0px 0px 0px 2px lighten($formFocus, 20);
-  outline: none;
-}
-button:focus,
-input[type="text"]:focus,
-input[type="reset"]:focus,
-input[type="file"]:focus,
-input[type="tel"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
+// button:focus-visible,
+// input[type="text"]:focus-visible,
+// input[type="reset"]:focus-visible,
+// input[type="file"]:focus-visible,
+// input[type="tel"]:focus-visible,
+// input[type="email"]:focus-visible,
+// input[type="password"]:focus-visible,
+// textarea:focus-visible,
+// select:focus-visible {
+//   // border: 1px solid lighten($formFocus, 20);
+//   box-shadow: 0px 0px 0px 2px lighten($formFocus, 20);
+//   outline: none;
+// }
+// button:focus,
+// input[type="text"]:focus,
+// input[type="reset"]:focus,
+// input[type="file"]:focus,
+// input[type="tel"]:focus,
+// input[type="email"]:focus,
+// input[type="password"]:focus,
+// textarea:focus,
+// select:focus {
+//   outline: none;
+// }
 
 //
 //---------------------------------------------下拉選單--------//
@@ -1278,8 +1305,7 @@ select {
   line-height: 1.35em;
   padding: 0.5em 24px 0.5em 0.5em;
   border: 1px solid $colorGray;
-  background: #fff url(../images/icon/icon_select_arrow.svg) no-repeat right
-    center;
+  background: #fff url(../images/icon/icon_select_arrow.svg) no-repeat right center;
   background-size: 16px;
 
   option {
@@ -1315,10 +1341,10 @@ input[type="radio"] {
   border-radius: 50%;
 }
 
+// input[type="checkbox"]:focus,
+// input[type="radio"]:focus,
 input[type="checkbox"]:checked,
-input[type="checkbox"]:focus,
-input[type="radio"]:checked,
-input[type="radio"]:focus {
+input[type="radio"]:checked {
   border-color: $formFocus;
   background-color: $formFocus;
   outline: none;
@@ -1478,6 +1504,7 @@ abbr[title] {
 .password {
   padding: 0.5em 3em 0.5em 3em !important;
 }
+
 .passwordEye {
   padding: 0;
   margin: 0;
@@ -1489,6 +1516,7 @@ abbr[title] {
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
+
   &::before {
     content: "";
     width: 20px;
@@ -1496,6 +1524,7 @@ abbr[title] {
     display: block;
     background: url("../images/icon/icon_eye_c_dark.svg") center no-repeat;
   }
+
   &.hide::before {
     background: url("../images/icon/icon_eye_dark.svg") center no-repeat;
   }

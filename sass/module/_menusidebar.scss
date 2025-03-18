@@ -12,9 +12,8 @@
   box-sizing: border-box;
   transition: 0.3s $cubic;
   transform: translateX(-300px);
-  @include screen("mobileMin") {
-    display: none;
-  }
+  display: none;
+
   .mobileArea {
     width: 300px;
     padding: 3em 0;
@@ -162,6 +161,7 @@
     margin: 1em auto;
     text-align: left;
     width: 90%;
+
     ul {
       float: none;
       overflow: hidden;
@@ -204,8 +204,7 @@
           }
 
           &:hover,
-          &:focus-visible {
-          }
+          &:focus-visible {}
         }
       }
     }
@@ -273,11 +272,6 @@
     border: none;
     background: none;
     border: none;
-
-    &:hover,
-    &:focus-visible {
-      box-shadow: none;
-    }
 
     &:before {
       position: absolute;

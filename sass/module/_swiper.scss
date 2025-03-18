@@ -1,6 +1,7 @@
 :root {
   --dotSize: 12px;
 }
+
 .mainSlider {
   .caption {
     position: absolute;
@@ -19,6 +20,7 @@
     text-align: center;
     @include textOverflow;
     box-sizing: border-box;
+
     @include screen("mobile") {
       width: 100%;
       height: 2em;
@@ -27,28 +29,34 @@
       padding: 0 1em;
     }
   }
+
   img {
     width: 100%;
 
     object-fit: cover;
   }
 }
+
 .cpSlider {
   padding: 1em 0;
 }
+
 .swiperBox {
   position: relative;
 }
+
 .swiper {
   img {
     display: block;
   }
 }
+
 .swiperDots {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+
   .swiper-pagination-bullet {
     /* 點的顏色 */
     background: #dadad7 !important;
@@ -56,36 +64,43 @@
     width: var(--dotSize) !important;
     height: var(--dotSize) !important;
     border-radius: 50%;
+
     &:hover,
     &:focus-visible {
       opacity: 1 !important;
       /* 點hover的顏色 */
       background: $colorSecondary !important;
     }
+
     &:focus-visible {
       opacity: 1;
       /* 點focus的顏色 */
       background: $colorSecondary !important;
       // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
     }
+
     &.swiper-pagination-bullet-active {
       opacity: 1;
       /* 點 active 的顏色 */
       background: $colorPrimary !important;
+
       &:hover {
         /* 點 active  hover的顏色 */
         background: $colorSecondary !important;
       }
+
       &:focus-visible {
         /* 點 active  focus的顏色 */
         background: $colorSecondary !important;
       }
     }
+
     &.noFonts {
       font-size: 0;
     }
   }
 }
+
 .swiperArrow {
   position: absolute;
   cursor: pointer;
@@ -97,6 +112,12 @@
   background: rgba(255, 255, 255, 0.4);
   border: none;
   z-index: 9;
+
+  &:focus-visible {
+    outline: 3px solid red;
+    outline-offset: -3px;
+  }
+
   &::before {
     content: "";
     width: 20px;
@@ -104,15 +125,19 @@
     display: block;
     background: url("../vendor/swiper/ar.svg") center no-repeat;
   }
+
   &.prevSlider {
     left: 0px;
   }
+
   &.nextSlider {
     right: 0px;
+
     &::before {
       transform: rotate(180deg);
     }
   }
+
   &.swiperArrow-disabled {
     opacity: 0.3;
   }
@@ -129,13 +154,16 @@
     margin: 0.5em 0px 1.2em;
     border-bottom: 1px solid $colorPrimary;
   }
+
   .cpSlider {
     @include gutter;
   }
+
   .imgContainer {
     @include aspectRatio(4, 3);
     overflow: hidden;
   }
+
   .caption {
     padding: 0.5em;
     position: absolute;
@@ -150,9 +178,11 @@
     @include textOverflow;
     transition: 0.3s ease-out;
   }
+
   a {
     color: #555;
     display: block;
+
     &:hover,
     &:focus-visible {
       .caption {
@@ -160,25 +190,31 @@
       }
     }
   }
+
   .swiperArrow {
     padding: 0;
+
+    &:focus-visible {
+      outline: 3px solid red;
+      outline-offset: -3px;
+    }
   }
 }
 
 .navSlider {
   position: relative;
+
   .swiper-slide {
     max-height: 180px;
+
     a {
       position: relative;
       display: block;
     }
+
     img {
       height: 100%;
       object-fit: cover;
-      &:hover,
-      &:focus {
-      }
     }
   }
 }

@@ -1,6 +1,5 @@
 // -----  基本功能開關   ---------------------------------------------------
 window.addEventListener('load', () => {
-  topNav(); // 手機版顯示nav選單
   navSticky(); // 捲動時固定主選單
   //xSlider('.language button', '.language ul'); //語系
   //fontSize(); // 全站字體
@@ -78,6 +77,9 @@ window.addEventListener('load', () => {
   const mainSlider = new Swiper('.mainSlider .swiper', {
     slidesPerView: 1,
     loop: false,
+    autoplay: {
+      delay: 5000,
+    },
     // 切換點
     pagination: {
       el: '.mainSlider .swiperDots',
@@ -95,12 +97,37 @@ window.addEventListener('load', () => {
     },
   });
 
+  const mpSwiperLength = document.querySelectorAll('.mainSlider .swiper-slide').length;
 
+  if (mpSwiperLength > 1) {
+    const controlBox = document.querySelector('.mainSlider .controlBox');
+    const mpControlPlay = document.querySelector('.mainSlider .controlBox .play');
+    const mpControlPause = document.querySelector('.mainSlider .controlBox .stop');
+    controlBox.classList.add('active');
+    mpControlPlay.setAttribute('aria-pressed', 'true');
+
+    mpControlPlay?.addEventListener('click', () => {
+      mainSlider.autoplay.start();
+      mpControlPlay.classList.add('active');
+      mpControlPause.classList.remove('active');
+
+      mpControlPlay.setAttribute('aria-pressed', 'true');
+      mpControlPause.setAttribute('aria-pressed', 'false');
+    });
+    mpControlPause?.addEventListener('click', () => {
+      mainSlider.autoplay.stop();
+      mpControlPause.classList.add('active');
+      mpControlPlay.classList.remove('active');
+
+      mpControlPlay.setAttribute('aria-pressed', 'false');
+      mpControlPause.setAttribute('aria-pressed', 'true');
+    });
+  }
 
   const eventSlider = new Swiper('.eventSlider .swiper', {
     slidesPerView: 1,
     loop: false,
-    effect: "fade",
+    effect: 'fade',
     fadeEffect: {
       crossFade: true, //上一張淡出，false上一張不淡出，下一張疊在上方
     },
@@ -111,8 +138,6 @@ window.addEventListener('load', () => {
       clickable: true,
     },
   });
-
-
 
   // mpSwiper
   const mpSwiper = new Swiper('.mpSlider .swiper', {
@@ -146,6 +171,7 @@ window.addEventListener('load', () => {
       },
     },
   });
+
   //adSwiper
   const adSwiper = new Swiper('.adSlider .swiper', {
     slidesPerView: 4,

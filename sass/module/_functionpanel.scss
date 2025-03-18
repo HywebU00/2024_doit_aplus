@@ -332,10 +332,10 @@ div.function {
           padding: 0;
           width: 32px;
           height: 32px;
-          border-radius: 50%;
 
-          &:hover,
-          &:focus-visible {
+          // border-radius: 50%;
+          // &:focus-visible,
+          &:hover {
             background: transparent;
 
             img {

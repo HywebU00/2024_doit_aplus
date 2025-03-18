@@ -15,8 +15,9 @@
   display: none;
   z-index: 99999999;
   text-indent: -999999px;
-  &:hover,
-  &:focus-visible {
+
+  &:focus-visible,
+  &:hover {
     background: url(../images/basic/icon_top.svg) no-repeat center top rgba(0, 0, 0, 0.8);
     box-shadow: none;
   }
