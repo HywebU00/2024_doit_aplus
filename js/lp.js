@@ -1,20 +1,36 @@
 //條件搜尋列ＪＳ
 const conditional_searchbtn = document.querySelector('.conditional_searchbtn');
 const conditional_searchblock = document.querySelector('.conditional_searchblock');
+const conditional_searchblockA = conditional_searchblock.querySelectorAll('a, button,input');
+conditional_searchbtn.setAttribute('aria-expanded', 'false');
 function conditionaSearcOpen() {
   let content = document.querySelector('.conditional_searchblock');
   conditional_searchbtn.addEventListener('click', function () {
     jsSlideToggle(content, 200);
   });
 }
-conditional_searchbtn.addEventListener('keydown', function () {
-  jsSlideToggle(conditional_searchblock, 200);
-  let el = document.querySelector('.conditional_searchblock');
-  let target = el.querySelectorAll('a, button');
-  [...target][target.length - 1].addEventListener('focusout', function (e) {
-    jsSlideUp(conditional_searchblock);
-  });
+conditional_searchbtn.addEventListener('keydown', function (e) {
+  if (e.code === 'Enter') {
+    conditional_searchbtn.setAttribute('aria-expanded', conditional_searchbtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+    e.preventDefault();
+    jsSlideToggle(conditional_searchblock, 200);
+    let el = document.querySelector('.conditional_searchblock');
+  } else if (e.code === 'Tab' && e.shiftKey && conditional_searchbtn.getAttribute('aria-expanded') === 'true') {
+    e.preventDefault();
+    conditional_searchblockA[conditional_searchblockA.length - 1].focus();
+  }
 });
+conditional_searchblockA[conditional_searchblockA.length - 1].addEventListener('keydown', function (e) {
+  if (e.code === 'Tab' && !e.shiftKey) {
+    e.preventDefault();
+    conditional_searchbtn.focus();
+  }
+});
+
+function ariaExpandedChange(obj) {
+  if (obj.getAttribute('aria-expanded') == 'false') obj.setAttribute('aria-expanded', 'true');
+  else obj.setAttribute('aria-expanded', 'false');
+}
 
 conditional_searchbtn ? conditionaSearcOpen() : null;
 
