@@ -316,4 +316,10 @@ window.addEventListener('load', () => {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
     },
   });
+
+  const allSwiperArrow = document.querySelectorAll('.swiperArrow');
+  allSwiperArrow?.forEach((item) => {
+    item.setAttribute('aria-hidden', 'true');
+    item.setAttribute('tabindex', '-1');
+  });
 })();
