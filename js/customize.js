@@ -58,10 +58,10 @@ window.addEventListener('load', () => {
       prevEl: '.cpSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -87,10 +87,13 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.mainSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      // renderBullet: function (index, className) {
+      //   return `<div class="${className} noFonts" data-swiper-index="${index}" aria-label="${mainSliderPagination[index]}" tabindex="-1">${mainSliderPagination[index]}</div>`;
+      // },
       renderBullet: function (index, className) {
-        return `<button class="${className} noFonts" aria-label="${mainSliderPagination[index]}">${mainSliderPagination[index]}</button>`;
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
       },
     },
     // 切換箭頭
@@ -99,11 +102,14 @@ window.addEventListener('load', () => {
       prevEl: '.mainSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
   });
+
+  const mainSliderPages = document.querySelectorAll('.mainSlider .swiper-pagination-bullet');
+  mainSliderPages?.forEach((item) => item.addEventListener('click', () => mainSlider.slideTo(item.dataset.swiperIndex)));
 
   const mpSwiperLength = document.querySelectorAll('.mainSlider .swiper-slide').length;
 
@@ -142,14 +148,20 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.eventSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
   });
+
+  const eventSliderPages = document.querySelectorAll('.eventSlider .swiper-pagination-bullet');
+  eventSliderPages?.forEach((item) => item.addEventListener('click', () => eventSlider.slideTo(item.dataset.swiperIndex)));
 
   // mpSwiper
   const mpSwiper = new Swiper('.mpSlider .swiper', {
@@ -159,8 +171,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.mpSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     // 切換箭頭
     navigation: {
@@ -168,10 +183,10 @@ window.addEventListener('load', () => {
       prevEl: '.mpSlider .prevSlider', //自行設定樣式
       disabledClass: '.mpSlider swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 1,
@@ -187,6 +202,8 @@ window.addEventListener('load', () => {
       },
     },
   });
+  const mpSwiperPages = document.querySelectorAll('.mpSwiper .swiper-pagination-bullet');
+  mpSwiperPages?.forEach((item) => item.addEventListener('click', () => mpSwiper.slideTo(item.dataset.swiperIndex)));
 
   //adSwiper
   const adSwiper = new Swiper('.adSlider .swiper', {
@@ -196,8 +213,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.adSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     // 切換箭頭
     navigation: {
@@ -205,10 +225,10 @@ window.addEventListener('load', () => {
       prevEl: '.adSlider .prevSlider', //自行設定樣式
       disabledClass: '.adSlider swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 1,
@@ -224,6 +244,8 @@ window.addEventListener('load', () => {
       },
     },
   });
+  const adSwiperPages = document.querySelectorAll('.adSwiper .swiper-pagination-bullet');
+  adSwiperPages?.forEach((item) => item.addEventListener('click', () => adSwiper.slideTo(item.dataset.swiperIndex)));
 
   //跑馬燈
   const marqueeSwiper = new Swiper('.marquee .swiper', {
@@ -235,10 +257,10 @@ window.addEventListener('load', () => {
       prevEl: '.marquee .prevSlider', //自行設定樣式
       disabledClass: '.marquee marquee-arrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
   });
 
   //cp_photo
@@ -253,10 +275,10 @@ window.addEventListener('load', () => {
       prevEl: '.navSlider .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -285,10 +307,10 @@ window.addEventListener('load', () => {
       prevEl: '.sliderFor .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     lazy: true,
     thumbs: {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
