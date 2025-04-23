@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   &.noscroll {
     position: static;
@@ -15,23 +17,28 @@ body {
     padding: 0;
   }
 }
+
 .row {
   @include makeRow();
+
   & > div {
     box-sizing: border-box;
   }
 }
+
 // 最外圍預設為100%
 .wrapper {
   width: 100%;
   margin: 0px auto;
   background: url(../images/bg1.png) no-repeat center center,
     url(../images/bg2.png) no-repeat center bottom;
+
   @include screen("mobile") {
     overflow: hidden;
     overflow-y: auto;
   }
 }
+
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
   margin: 0 auto;
@@ -39,30 +46,37 @@ body {
   position: relative;
   @include containerFixed;
 }
+
 .main {
   position: relative;
   margin: 0 auto 5em;
+
   @include screen("mobile") {
     padding-top: 60px;
   }
+
   // 可先設定一個中央區塊最大寬，限制accessKey對齊
   h2 {
     line-height: 1.25em;
   }
 }
+
 .inkv {
   @include screen("mobile") {
     display: none;
   }
+
   .container {
     max-width: 100%;
     padding: 0;
+
     img {
       display: block;
       width: 100%;
     }
   }
 }
+
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerPage ClassName
 .innerPage {
@@ -71,11 +85,13 @@ body {
     @include gutter(); //gutter 代表左右要留白
     display: flex;
   }
+
   .centerBlock {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
   }
+
   .leftBlock {
     flex: none;
     flex-basis: 260px;
@@ -84,6 +100,7 @@ body {
     align-self: flex-start;
     position: sticky;
     top: 50px;
+
     &.hidden {
       & + .centerBlock {
         flex: none;
@@ -91,13 +108,16 @@ body {
         max-width: 100%;
       }
     }
+
     & + .centerBlock {
       flex: auto;
       flex-basis: calc(100% - 300px);
       max-width: calc(100% - 300px);
     }
+
     @include screen("tablet") {
       display: none;
+
       & + .centerBlock {
         flex: none;
         flex-basis: 100%;
@@ -106,6 +126,33 @@ body {
     }
   }
 }
+
 .hidden {
   display: none;
+}
+
+#lightBox {
+  width: 80%;
+  max-width: 800px !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+
+  h2 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  a:focus-visible {
+    outline-offset: 2px;
+  }
+
+  .f-button.is-close-btn {
+    opacity: 1 !important;
+
+    &:focus-visible {
+      box-shadow: none !important;
+      outline: 2px solid red !important;
+      outline-offset: 0px !important;
+    }
+  }
 }

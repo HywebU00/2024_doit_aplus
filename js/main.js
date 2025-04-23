@@ -2015,12 +2015,12 @@ function accordionFunction(obj) {
     const init = () => {
       accordionList.forEach((content) => content.classList.remove('active'));
       // 增加無障礙設置
-      accordionList.forEach((item, index) => {
-        accordionBtn[index].insertAdjacentHTML('beforeend', `<span class="accordionState">${open}</span>`);
-        accordionBtn[index].insertAdjacentHTML('beforeend', `<span class="accordionArrow"></span>`);
-        accordionBtn[index].setAttribute('aria-expanded', 'false');
-        accordionBtn[index].setAttribute('aria-controls', id[index]);
-        accordionBtn[index].setAttribute('role', 'button');
+      accordionList?.forEach((item, index) => {
+        accordionBtn[index]?.insertAdjacentHTML('beforeend', `<span class="accordionState">${open}</span>`);
+        accordionBtn[index]?.insertAdjacentHTML('beforeend', `<span class="accordionArrow"></span>`);
+        accordionBtn[index]?.setAttribute('aria-expanded', 'false');
+        accordionBtn[index]?.setAttribute('aria-controls', id[index]);
+        accordionBtn[index]?.setAttribute('role', 'button');
         accordionContent[index].setAttribute('id', id[index]);
         accordionContent[index].setAttribute('aria-labelledby', id[index]);
         accordionState = accordion.querySelectorAll('.accordionState');
@@ -2028,7 +2028,7 @@ function accordionFunction(obj) {
 
       if (nowIndex !== null) {
         accordionList[nowIndex].classList.add('active');
-        accordionBtn[nowIndex].setAttribute('aria-expanded', 'true');
+        accordionBtn[nowIndex]?.setAttribute('aria-expanded', 'true');
         jsSlideDown(accordionContent[nowIndex]);
         accordionState[nowIndex].textContent = close;
       }
@@ -2065,7 +2065,7 @@ function accordionFunction(obj) {
 
       // 點擊
       if (openSwitch) {
-        accordionBtn[index].addEventListener('click', (e) => {
+        accordionBtn[index]?.addEventListener('click', (e) => {
           e.preventDefault();
           siblings.forEach((content) => content.classList.remove('active'));
           accordionList[index].classList.toggle('active');
@@ -2084,7 +2084,7 @@ function accordionFunction(obj) {
         });
 
         // 鍵盤
-        accordionBtn[index].addEventListener('keydown', function (e) {
+        accordionBtn[index]?.addEventListener('keydown', function (e) {
           accordionList[index].classList.add('active');
           accordionState[index].textContent = close;
           nowIndex = index;

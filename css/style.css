@@ -7462,6 +7462,27 @@ img {
   .hidden {
     display: none;
   }
+  #lightBox {
+    width: 80%;
+    max-width: 800px !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+  }
+  #lightBox h2 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+  #lightBox a:focus-visible {
+    outline-offset: 2px;
+  }
+  #lightBox .f-button.is-close-btn {
+    opacity: 1 !important;
+  }
+  #lightBox .f-button.is-close-btn:focus-visible {
+    box-shadow: none !important;
+    outline: 2px solid red !important;
+    outline-offset: 0px !important;
+  }
   .mobileSidebar {
     position: fixed;
     top: 0;

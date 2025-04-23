@@ -439,6 +439,14 @@
       </footer>
       <!-- footer End -->
     </div>
+
+    <div id="lightBox">
+      <div class="lightBoxContent">
+        <h2>資訊設備例行維護作業公告</h2>
+        <p>本部資訊設備例行維護作業訂於本(114)年4月18日（星期五）下午6時至下午7時進行，作業期間網站及各項資訊服務可能偶有中斷情形，不便之處，祈請見諒！ 本案聯絡人：本部資訊處 林小姐 聯絡電話：（02）2321—2200分機1234 E-Mail：<a href="mailto:coooo@moea.gov.tw">coooo@moea.gov.tw</a></p>
+      </div>
+    </div>
+
     <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
 
     <!-- lazyload -->
@@ -454,8 +462,9 @@
     <script src="js/main.js"></script>
     <!-- js -->
     <script src="js/customize.js"></script>
-    <!-- <script>
-      new WOW().init();
-    </script> -->
+    <script>
+      // 首頁彈跳資料
+      Fancybox.show([{ src: '#lightBox', type: 'inline' }]);
+    </script>
   </body>
 </html>

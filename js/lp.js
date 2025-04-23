@@ -26,13 +26,6 @@ conditional_searchblockA[conditional_searchblockA.length - 1].addEventListener('
   }
 });
 
-function ariaExpandedChange(obj) {
-  if (obj.getAttribute('aria-expanded') == 'false') obj.setAttribute('aria-expanded', 'true');
-  else obj.setAttribute('aria-expanded', 'false');
-}
-
-conditional_searchbtn ? conditionaSearcOpen() : null;
-
 // 手風琴功能
 function accordionFunctions(obj) {
   'use strict';
