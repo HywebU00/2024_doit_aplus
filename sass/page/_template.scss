@@ -148,6 +148,10 @@ body {
 
   .f-button.is-close-btn {
     opacity: 1 !important;
+    top: 5px !important;
+    right: 5px !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    border-radius: 50% !important;
 
     &:focus-visible {
       box-shadow: none !important;
