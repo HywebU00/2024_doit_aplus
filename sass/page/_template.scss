@@ -137,6 +137,10 @@ body {
   border-radius: 12px !important;
   overflow: hidden;
 
+  .lightBoxContent {
+    overflow-y: auto;
+  }
+
   h2 {
     padding-bottom: 15px;
     border-bottom: 1px solid #ccc;

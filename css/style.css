@@ -7469,6 +7469,9 @@ img {
     border-radius: 12px !important;
     overflow: hidden;
   }
+  #lightBox .lightBoxContent {
+    overflow-y: auto;
+  }
   #lightBox h2 {
     padding-bottom: 15px;
     border-bottom: 1px solid #ccc;
