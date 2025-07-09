@@ -9456,6 +9456,42 @@ img {
     width: 100%;
     margin: 0.5em 0;
   }
+  .formCard .surveyForm {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .formCard .surveyForm .title {
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: bold;
+  }
+  .formCard .surveyForm p {
+    text-align: center;
+    margin: 0;
+  }
+  .formCard .surveyForm .formTitle {
+    max-width: none !important;
+    margin-bottom: 10px;
+  }
+  .formCard .surveyForm .formContent {
+    max-width: none !important;
+    width: 100%;
+  }
+  .formCard .surveyForm .formContent textarea {
+    width: 100%;
+    margin: 0.3em 0.3em 0 0.3em;
+  }
+  .formCard .surveyForm .formContent span {
+    color: #888;
+    font-size: 0.8125rem;
+    margin: 0 0 0 0.3em;
+  }
+  .formCard .surveyForm .btnGrp {
+    padding: 0;
+  }
   .formCard .formGrp .btnVerify {
     margin: 0.25em 0.3em;
     flex: none;
